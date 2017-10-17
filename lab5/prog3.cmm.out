@@ -1,0 +1,20 @@
+struct foo{
+    int x;
+    int y;
+};
+
+struct bar{
+    struct foo x;
+    bool z;
+};
+
+void main() {
+    struct foo a;
+    struct bar b;
+    a(foo).x(int) = 1;
+    a(foo).y(int) = 2;
+    b(bar).x(foo)(struct) = a(foo);
+    b(bar).x(foo)(struct).y(int)++;
+    b(bar).z(bool) = true;
+}
+

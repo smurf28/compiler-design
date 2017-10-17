@@ -1,0 +1,13 @@
+struct Foo{
+    int x;
+    bool b;
+};
+
+void main() {
+    struct Foo z;
+    int y;
+    cin >> z(Foo).x(int);
+    z(Foo).b(bool) = true;
+    y(int) = z(Foo).x(int);
+}
+

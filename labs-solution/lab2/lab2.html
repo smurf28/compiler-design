@@ -1,0 +1,1072 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/TR/REC-html40"
+  xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <meta name="ProgId" content="Word.Document">
+    <meta name="Generator" content="Microsoft Word 12">
+    <meta name="Originator" content="Microsoft Word 12">
+    <link rel="File-List"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/filelist.xml">
+    <title>Lab #2</title>
+    <!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>reges</o:Author>
+  <o:LastAuthor>Stuart Reges</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:LastPrinted>2009-01-13T22:05:00Z</o:LastPrinted>
+  <o:Created>2010-01-12T21:22:00Z</o:Created>
+  <o:LastSaved>2010-01-12T21:22:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>639</o:Words>
+  <o:Characters>3863</o:Characters>
+  <o:Company>CSE</o:Company>
+  <o:Lines>32</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4494</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+    <link rel="themeData"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/themedata.thmx">
+    <link rel="colorSchemeMapping"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/colorschememapping.xml">
+    <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+   <w:DontUseIndentAsNumberingTabStop/>
+   <w:FELineBreak11/>
+   <w:WW11IndentRules/>
+   <w:DontAutofitConstrainedTables/>
+   <w:AutofitLikeWW11/>
+   <w:HangulWidthLikeWW11/>
+   <w:UseNormalStyleForList/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="0" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="0" Name="No List"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+    <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.25in .5in .25in .5in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1125197784;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1780164454 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+  </style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+  </head>
+  <body style="" lang="EN-US">
+    <div class="Section1">
+      <p class="MsoNormal" style="text-align: center;" align="center"><br>
+        <font face="Helvetica, Arial, sans-serif"><b style=""><span
+              style="font-size: 18pt;"> <o:p></o:p></span></b></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">For this assignment you will
+            use JLex to write a lexical scanner for our language, called
+            C--, a small subset of the C++ language. Features of C--
+            that are relevant to this assignment are described below.<br>
+          </span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>Getting started<br>
+          </big></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">First to set up your
+            environment for this lab and the coming labs, you have
+            to&nbsp; follow those steps:<br>
+          </span></font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">download the archive <font
+                face="Courier New, Courier, monospace">deps.tar.gz</font>
+              (see the supporting files section below) : this is a
+              compressed folder containing the JLex and Java CUP classes
+              you'll need from now on</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">move the archive into your
+              main folder <font face="Courier New, Courier, monospace">~/compiler</font>
+              <br>
+            </span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">once </span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace">deps.tar.gz</font> is inside <font
+                face="Courier New, Courier, monospace">~/compiler</font>,
+              extract&nbsp; it<br>
+            </span></font></li>
+      </ul>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">The previous actions can be
+            taken from a terminal issuing the following commands:</span></font></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Courier New, Courier, monospace"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">mv ~/Downloads/</span><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">deps.tar.gz ~/compiler<br>
+              cd ~/compiler<br>
+              tar zxf </span></font><font face="Helvetica, Arial,
+            sans-serif"><span style="font-size: 12pt; font-family:
+              &quot;Times New Roman&quot;,&quot;serif&quot;;"><font
+                face="Courier New, Courier, monospace">deps.tar.gz</font><br>
+            </span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">From now on and for all the
+            coming labs (including this one) you'll be able to use the
+            Java classes from JLex and Java CUP.<br>
+          </span></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Finally, another setting you
+            have to perform is defining a <font face="Courier New,
+              Courier, monospace">CLASSPATH</font> environment variable.
+            This is needed by the Java compiler (remember, we are no
+            longer inside Eclipse). To set the </span></font><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+              Courier, monospace">CLASSPATH</font> variable:<br>
+          </span></font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">open the file <font
+                face="Courier New, Courier, monospace">~/.bashrc</font>
+              in an editor (like <i>gedit</i>)</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">go to the end of the file
+              and add the following line: </span></font><br>
+          <font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace">export&nbsp; </font></span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace"><span style="font-size: 12pt;
+                  font-family: &quot;Times New
+                  Roman&quot;,&quot;serif&quot;;">CLASSPATH=</span>~/compiler/deps/JLex:~/compiler/deps/java_cup:~/compiler/deps:.</font></span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"></span></font><br>
+          <font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"></span></font></li>
+      </ul>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Be aware of not missing the
+            last&nbsp; <font face="Courier New, Courier, monospace">'.'</font>&nbsp;
+
+
+            (dot) at the end of the class path!&nbsp; For the new
+            environment variable to be active, close any opened terminal
+            and open a new one. Check that the variable is well defined
+            by issuing the command <font face="Courier New, Courier,
+              monospace">echo $CLASSPATH</font> in the terminal: you
+            should see the value of the variable displayed.<br>
+          </span></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">As for lab #2,&nbsp;
+            download the archive <font face="Courier New, Courier,
+              monospace">lab2.zip</font> and extract it under the folder
+            <font face="Courier New, Courier, monospace">~/compiler</font>.
+            Inside the <font face="Courier New, Courier, monospace">lab2</font>
+            folder, you'll find:</span></font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace">cmm.jlex</font>: a JLex file
+              specification for C--. You have to complete this file</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace">sym.java</font>: token definitions
+              (this file will eventually be generated by the parser
+              generator). Do not change this file</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace">ErrMsg.java</font>: the <font
+                face="Courier New, Courier, monospace">ErrMsg</font>
+              class will be used to print error and warning messages. Do
+              not change this file</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace">Main.java</font>: contains the main
+              program that tests the scanner. You don't need to change
+              this file</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace">Makefile</font>: a Makefile that
+              uses JLex to create a scanner, and also makes <font
+                face="Courier New, Courier, monospace">Main.class</font>.
+            </span></font><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">You don't need to change
+              this file</span></font></li>
+      </ul>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>The lexical
+            level of C--<br>
+          </big></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">This section defines the
+            lexical level of the C-- language. At this level, we have
+            the following language issues:</span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Tokens</span></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">The tokens of the C--
+            language are defined as follows:</span></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">1/ Any of the following
+            reserved words:</span></font></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace">bool&nbsp; int&nbsp;&nbsp;
+                void&nbsp; true&nbsp; false&nbsp; struct<br>
+                cin&nbsp;&nbsp; cout&nbsp; if&nbsp;&nbsp;&nbsp;
+                else&nbsp; while&nbsp; return&nbsp; </font><br>
+            </span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">2/ Any identifier (a
+            sequence of one or more letters and/or digits, and/or
+            underscores, starting with a letter or underscore, excluding
+            reserved words)</span></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">3/ Any integer literal (a
+            sequence of one or more digits)</span></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">4/ Any string literal (a
+            sequence of zero or more string characters surrounded by
+            double quotes). A string character is either an escaped
+            character: a backslash followed by any one of the following
+            six characters:</span></font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">n</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">t</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">a single quote</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">a double quote</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">a question mark</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">another backslash</span></font></li>
+      </ul>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">or a single character other
+            than new line or double quote or backslash.</span></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Examples of legal string
+            literals:</span></font></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Courier New, Courier, monospace"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">""<br>
+              "&amp;!88"<br>
+              "use \n to denote a newline character"<br>
+              "include a quote like this \" and a backslash like this
+              \\"</span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Examples of things that are
+            not legal string literals:</span></font></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Courier New, Courier, monospace"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">"unterminated<br>
+              "also unterminated \"<br>
+              "backslash followed by space: \ is not allowed"<br>
+              "bad escaped character: \a AND not terminated</span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">5/ Any of the following one-
+            or two-character symbols:</span></font></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Courier New, Courier, monospace"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+              }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              )&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+              ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &lt;&lt;&nbsp;&nbsp;&nbsp;&nbsp;
+              &gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp; ++<br>
+              --&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /<br>
+              !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &amp;&amp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ||&nbsp;&nbsp;&nbsp;&nbsp; ==&nbsp;&nbsp;&nbsp;&nbsp; !=<br>
+              &lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &lt;=&nbsp;&nbsp;&nbsp;&nbsp;
+              &gt;=&nbsp;&nbsp;&nbsp;&nbsp; =</span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Token "names" (i.e., values
+            to be returned by the scanner) are defined in the file <font
+              face="Courier New, Courier, monospace">sym.java</font>.
+            For example, the name for the token to be returned when an
+            integer literal is recognized is <font face="Courier New,
+              Courier, monospace">INTLITERAL</font> and the token to be
+            returned when the reserved word <font face="Courier New,
+              Courier, monospace">int</font> is recognized is <font
+              face="Courier New, Courier, monospace">INT</font>. Note
+            that code telling JLex to return the special <font
+              face="Courier New, Courier, monospace">EOF</font> token on
+            end-of-file has already been included in the file <font
+              face="Courier New, Courier, monospace">cmm.jlex</font> --
+            you don't have to include a specification for that token.
+            Note also that the <font face="Courier New, Courier,
+              monospace">READ</font> token is for the 2-character symbol
+            <font face="Courier New, Courier, monospace">&gt;&gt;</font>
+            and the <font face="Courier New, Courier, monospace">WRITE</font>
+            token is for the 2-character symbol <font face="Courier
+              New, Courier, monospace">&lt;&lt;</font><br>
+          </span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Comments</span></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Text starting with a double
+            slash (<font face="Courier New, Courier, monospace">//</font>)
+            or a sharp sign (<font face="Courier New, Courier,
+              monospace">#</font>) up to the end of the line is a
+            comment (except of course if those characters are inside a
+            string literal). For example:</span></font></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Courier New, Courier, monospace"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">// this is a comment<br>
+              # and so is this</span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">The scanner should recognize
+            and ignore comments (but there is no <font face="Courier
+              New, Courier, monospace">COMMENT</font> token).<br>
+          </span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Whitespace</span></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Spaces, tabs, and newline
+            characters are <i>whitespace</i>. Whitespaces separates
+            tokens and changes the character counter, but should
+            otherwise be ignored (except inside a string literal).</span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Illegal Characters</span></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Any character that is not
+            whitespace and is not part of a token or comment is illegal.</span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Length Limits</span></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">You may not assume any
+            limits on the lengths of identifiers, string literals,
+            integer literals, comments, etc.<br>
+          </span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>What your
+            scanner should do</big></font></h3>
+      <p><font face="Helvetica, Arial, sans-serif">The main job of the
+          scanner is to identify and return the next token. The value to
+          be returned includes:<br>
+        </font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif">the token "name"
+            (e.g.,<font face="Courier New, Courier, monospace">
+              INTLITERAL</font>). Token names are defined in the file <font
+              face="Courier New, Courier, monospace">sym.java</font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif">the line number in
+            the input file on which the token starts</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">the number of the
+            character on that line at which the token starts</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">for identifiers,
+            integer literals, and string literals: the actual value (a <font
+              face="Courier New, Courier, monospace">String</font>, an <font
+              face="Courier New, Courier, monospace">int</font>, or a <font
+              face="Courier New, Courier, monospace">String</font>,
+            respectively)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">for a string
+            literal, the value should include the double quotes that
+            surround the string, as well as any backslashes used inside
+            the string as part of an "escaped" character</font></li>
+      </ul>
+      <p><font face="Helvetica, Arial, sans-serif">Your scanner will
+          return this information by creating a new <font face="Courier
+            New, Courier, monospace">java_cup.runtime.Symbol</font>
+          object in the action associated with each regular expression
+          that defines a token (the <font face="Courier New, Courier,
+            monospace">Symbol</font> type is defined in <font
+            face="Courier New, Courier, monospace">java_cup.runtime</font>:
+          you don't need to look at that definition). A <font
+            face="Courier New, Courier, monospace">Symbol</font>
+          includes a field of type <font face="Courier New, Courier,
+            monospace">int</font> for the token name, and a field of
+          type Object (named value), which will be used for the line and
+          character numbers and for the token value (for identifiers and
+          literals). See cmm.jlex for examples of how to call the Symbol
+          constructor. See Main.java for code that accesses the fields
+          of a Symbol.<br>
+          <br>
+          In your compiler, the value field of a Symbol will actually be
+          of type <font face="Courier New, Courier, monospace">TokenVal</font>;
+          that type must be defined in <font face="Courier New,
+            Courier, monospace">cmm.jlex</font>. Every <font
+            face="Courier New, Courier, monospace">TokenVal</font> must
+          store the line and character numbers (both start counting from
+          1, not 0) which are the line and the index of the first
+          character of the token.&nbsp; Subtypes of <font face="Courier
+            New, Courier, monospace">TokenVal</font> with more fields
+          must be used for the values associated with identifier,
+          integer literal, and string literal tokens. These subtypes, <font
+            face="Courier New, Courier, monospace">IntLitTokenVal</font>,
+          <font face="Courier New, Courier, monospace">IdLitTokenVal</font>,
+          and <font face="Courier New, Courier, monospace">StrLitTokenVal</font>
+          are partially defined in <font face="Courier New, Courier,
+            monospace">cmm.jlex</font>.<br>
+          <br>
+          Line counting is done by the scanner generated by JLex (the
+          variable <font face="Courier New, Courier, monospace">yyline</font>
+          holds the current line number, counting from 0), but you will
+          have to include code to keep track of the current character
+          number on that line. <br>
+          <br>
+          The JLex scanner also provides a method <font face="Courier
+            New, Courier, monospace">yytext</font> that returns the
+          actual text that matches a regular expression. You will find
+          it useful to use this method in the actions you write in your
+          JLex specification.<br>
+          <br>
+          Note that, for the integer literal token, you will need to
+          convert a <font face="Courier New, Courier, monospace">String</font>
+          (the value scanned) to an <font face="Courier New, Courier,
+            monospace">int</font> (the value to be returned). You should
+          use code like the following:<br>
+        </font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">double d = (new
+            Double(yytext())).doubleValue(); // convert String to double</font></font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">// INSERT CODE HERE TO CHECK FOR
+            BAD VALUE -- SEE ERRORS AND WARNINGS BELOW</font></font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">int k =&nbsp; (new
+            Integer(yytext())).intValue();&nbsp;&nbsp;&nbsp; // convert
+            to int</font></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif">Errors and Warnings</font></h3>
+      <p><font face="Helvetica, Arial, sans-serif">The scanner should
+          print the error messages EXACTLY as posted here. The scanner
+          should handle the following errors as indicated:<br>
+          <br>
+          <u><b>Illegal characters</b></u><br>
+          <br>
+        </font><font face="Helvetica, Arial, sans-serif">Issue the error
+          message: <font face="Courier New, Courier, monospace">illegal
+            character ignored: ch</font> (where <font face="Courier
+            New, Courier, monospace">ch</font> is the illegal character)
+          and ignore the character.</font></p>
+      <p><font face="Helvetica, Arial, sans-serif"><u><b>Unterminated
+              string literals</b></u><br>
+          <br>
+        </font><font face="Helvetica, Arial, sans-serif">A string
+          literal is considered to be unterminated if there is a newline
+          or end-of-file before the closing quote. Issue the error
+          message: unterminated string literal ignored and ignore the
+          unterminated string literal (start looking for the next token
+          after the newline).</font><br>
+      </p>
+      <p><font face="Helvetica, Arial, sans-serif"><u><b>Bad string
+              literals</b></u><br>
+          <br>
+          A string literal is "bad" if it includes a bad "escaped"
+          character; i.e., a backslash followed by something other than
+          <font face="Courier New, Courier, monospace">n</font>, <font
+            face="Courier New, Courier, monospace">t</font>, single
+          quote, double quote, another backslash, or a question mark.
+          Issue the error message: string literal with bad escaped
+          character ignored and ignore the string literal (start looking
+          for the next token after the closing quote). If the string
+          literal has a bad escaped character and is unterminated, issue
+          the error message unterminated string literal with bad escaped
+          character ignored, and ignore the bad string literal (start
+          looking for the next token after the newline). Note that a
+          string literal that has a newline immediately after a
+          backslash should be treated as having a bad escaped character
+          and being unterminated. For example, given: <br>
+        </font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, monospace">"very bad string
+            \ <br>
+            abc</font></p>
+      </blockquote>
+      <p><font face="Helvetica, Arial, sans-serif">the scanner should
+          report an unterminated string literal with a bad escaped
+          character on line 1, and an identifier on line 2.</font></p>
+      <p><font face="Helvetica, Arial, sans-serif"><u><b>Bad integer
+              literals (integer literals larger than Integer.MAX_VALUE)</b></u><br>
+          <br>
+          Issue the warning message: <font face="Courier New, Courier,
+            monospace">integer literal too large;</font> using max value
+          and return Integer.MAX_VALUE as the value for that token.<br>
+        </font></p>
+      <p><font face="Helvetica, Arial, sans-serif">For unterminated
+          string literals, bad string literals, and bad integer
+          literals, the line and column numbers used in the error
+          message should correspond to the position of the first
+          character in the string/integer literal. Use the fatal and
+          warn methods of the ErrMsg class to print error and warning
+          messages. Be sure to use exactly the wording given above for
+          each message so that the output of your scanner will match the
+          output that we expect when we test your code.</font><br>
+      </p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>Development
+            strategy<br>
+          </big></font></h3>
+      <font face="Helvetica, Arial, sans-serif">To complete this lab,
+        you should first focus on the regular expression rules. Add a
+        rule for each type of token incrementally. Check each rule one
+        by one with different input files. You can start with simple
+        actions, like printing out some message. Before defining rules,
+        remember that you can define <i>macros</i> (like the provided
+        macros <font face="Courier New, Courier, monospace">LETTER</font>,
+        <font face="Courier New, Courier, monospace">DIGIT</font> and <font
+          face="Courier New, Courier, monospace">WHITESPACE</font>). The
+        action of each rule must return a <font face="Courier New,
+          Courier, monospace">java_cup.runtime.Symbol</font>
+        object.&nbsp; There are two constructors for the </font><font
+        face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">java_cup.runtime.Symbol</font> class:<br>
+        <br>
+        <font face="Courier New, Courier, monospace">Symbol(int
+          tokenNumber)</font>: this constructor is used when there is no
+        value associated with the token (like for <font face="Courier
+          New, Courier, monospace">EOF</font>)<br>
+      </font><font face="Helvetica, Arial, sans-serif"><font
+          face="Courier New, Courier, monospace">Symbol(int tokenNumber,
+          Object tokenVal)</font>: this constructor is used when the
+        token has a value (for example, for an <font face="Courier New,
+          Courier, monospace">INT</font> token the value is the value of
+        the integer)<br>
+        <br>
+        After you put up the rules, you can complete the Java section of
+        the <font face="Courier New, Courier, monospace">cmm.jlex</font>
+        file: the Java code in the top part of the file is copied
+        verbatim in the scanner class generated by JLex (<font
+          face="Courier New, Courier, monospace">cmm.jlex.java</font>).
+        This code defines the classes <font face="Courier New, Courier,
+          monospace">TokenVal</font> and its sub-classes.<br>
+      </font><font face="Helvetica, Arial, sans-serif"><span
+          style="font-size: 12pt; font-family: &quot;Times New
+          Roman&quot;,&quot;serif&quot;;"></span></font><font
+        face="Helvetica, Arial, sans-serif"><span style="font-size:
+          12pt; font-family: &quot;Times New
+          Roman&quot;,&quot;serif&quot;;"></span></font><font
+        face="Helvetica, Arial, sans-serif"><o:p></o:p></font>
+      <h3><font face="Helvetica, Arial, sans-serif"><o:p><big>What to
+              turn in</big></o:p></font></h3>
+      <font face="Helvetica, Arial, sans-serif">Turn in all your Java
+        sources (the <font face="Courier New, Courier, monospace">.java</font>
+        files) files ONLY plus the <font face="Courier New, Courier,
+          monospace">Makefile</font>.&nbsp; <b>Don't turn in any&nbsp;
+        </b><b><font face="Courier New, Courier, monospace">.class</font></b><b>&nbsp;
+
+
+
+
+
+          or&nbsp; <font face="Courier New, Courier, monospace">.txt&nbsp;</font>
+          file!<br>
+          <br>
+        </b>To turn in your files, you <font color="#ff0000"><b>MUST
+            STRICTLY FOLLOW</b></font> those steps:<br>
+      </font>
+      <ol>
+        <li><font face="Helvetica, Arial, sans-serif">create a folder
+            name after your name (please use the English version of your
+            name, like&nbsp; <font face="Courier New, Courier,
+              monospace">MarcGaetano</font>)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">copy the files to
+            turn in into that folder</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">zip that folder:
+            in the terminal, go on the parent folder of your folder and
+            issue the command:&nbsp; <font face="Courier New, Courier,
+              monospace">zip -r YourFolder.zip </font></font><font
+            face="Helvetica, Arial, sans-serif"><font face="Courier New,
+              Courier, monospace">YourFolder/ </font>. This will
+            produce the archive file <font face="Courier New, Courier,
+              monospace">YourFolder.zip</font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif">upload the archive
+            <font face="Courier New, Courier, monospace">YourFolder.zip</font>
+            on the eLearning platform</font></li>
+      </ol>
+      <font face="Helvetica, Arial, sans-serif"><br>
+        <font color="#ff0000"><b>Labs turned in not following those ru</b><b>les
+
+
+
+
+            won't be graded!</b></font><br>
+      </font>
+      <h2><font face="Helvetica, Arial, sans-serif"> Supporting files</font></h2>
+      <font face="Helvetica, Arial, sans-serif"> The supporting files
+        are grabbed in the archive file <font face="Courier New,
+          Courier, monospace">lab2.<font face="Courier New, Courier,
+            monospace">tar.gz</font></font><br>
+      </font><br>
+      <h3><o:p></o:p></h3>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/TR/REC-html40"
+  xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <meta name="ProgId" content="Word.Document">
+    <meta name="Generator" content="Microsoft Word 12">
+    <meta name="Originator" content="Microsoft Word 12">
+    <link rel="File-List"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/filelist.xml">
+    <title>Lab #4</title>
+    <!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>reges</o:Author>
+  <o:LastAuthor>Stuart Reges</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:LastPrinted>2009-01-13T22:05:00Z</o:LastPrinted>
+  <o:Created>2010-01-12T21:22:00Z</o:Created>
+  <o:LastSaved>2010-01-12T21:22:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>639</o:Words>
+  <o:Characters>3863</o:Characters>
+  <o:Company>CSE</o:Company>
+  <o:Lines>32</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4494</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+    <link rel="themeData"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/themedata.thmx">
+    <link rel="colorSchemeMapping"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/colorschememapping.xml">
+    <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+   <w:DontUseIndentAsNumberingTabStop/>
+   <w:FELineBreak11/>
+   <w:WW11IndentRules/>
+   <w:DontAutofitConstrainedTables/>
+   <w:AutofitLikeWW11/>
+   <w:HangulWidthLikeWW11/>
+   <w:UseNormalStyleForList/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="0" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="0" Name="No List"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+    <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.25in .5in .25in .5in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1125197784;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1780164454 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+  </style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+  </head>
+  <body style="" lang="EN-US">
+    <div class="Section1"> <font face="Helvetica, Arial, sans-serif"> </font>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">In this assignment, you will
+            write some Java classes to represent a symbol table. Make
+            sure you read through everything carefully. <br>
+          </span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>Getting started</big></font></h3>
+      <p><font face="Helvetica, Arial, sans-serif">Files on which you
+          should build are in the <font face="Courier New, Courier,
+            monospace">lab<font face="Courier New, Courier, monospace">4</font>.tar.gz</font>
+          archive file (see below in the supporting files section). This
+          archive contains:<br>
+        </font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">SymInfo.java</font>:
+            a file for the class <font face="Courier New, Courier,
+              monospace">SymInfo</font>. A <font face="Courier New,
+              Courier, monospace">SymInfo</font> object gathers all the
+            information related to a symbol. </font><font
+            face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+              Arial, sans-serif"><font face="Helvetica, Arial,
+                sans-serif"><font face="Helvetica, Arial, sans-serif">You
+
+
+
+                  need to write&nbsp; this file</font></font></font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">SymTable.java</font>:
+            a file for the class <font face="Courier New, Courier,
+              monospace">SymTable</font>. A <font face="Courier New,
+              Courier, monospace">SymTable</font> object implements a
+            symbol table. </font><font face="Helvetica, Arial,
+            sans-serif"><font face="Helvetica, Arial, sans-serif"><font
+                face="Helvetica, Arial, sans-serif"><font
+                  face="Helvetica, Arial, sans-serif">You need to
+                  write&nbsp; this file</font></font></font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">ast.java</font>:
+            this file contains class definitions for the AST
+            structure&nbsp; for the parser. This is part of the solution
+            of lab #3. You need to slightly update this file<br>
+          </font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">Main.java</font>:
+            the main program to test your classes. You don't need to
+            change this file</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">Makefile</font>: a
+            Makefile for lab #4. </font><font face="Helvetica, Arial,
+            sans-serif"><font face="Helvetica, Arial, sans-serif">You
+              don't need to change this file</font></font></li>
+      </ul>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>Specifications</big></font></h3>
+      <p><font face="Helvetica, Arial, sans-serif">For this assignment
+          you will implement five Java classes: <font face="Courier
+            New, Courier, monospace">Type</font>, <font face="Courier
+            New, Courier, monospace">SymInfo</font>, </font><font
+          face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+            Arial, sans-serif"><font face="Courier New, Courier,
+              monospace">SymTable</font>, </font><font face="Courier
+            New, Courier, monospace">DuplicateSymException</font>, and <font
+            face="Courier New, Courier, monospace">EmptySymTableException</font>.&nbsp;
+
+
+
+          The <font face="Courier New, Courier, monospace">Type</font>
+          class is used to define the possible types of a <font
+            face="Courier New, Courier, monospace">SymInfo</font>
+          object.&nbsp; The <font face="Courier New, Courier,
+            monospace">SymTable</font> class will be used by the
+          compiler to represent a symbol table, a data structure that
+          stores the identifiers declared in the program being compiled
+          (e.g., function and variable names) and information about each
+          of them (e.g., its type, where it will be stored at runtime).
+          The symbol table will be implemented as a <font face="Courier
+            New, Courier, monospace">List</font> of <font face="Courier
+            New, Courier, monospace">HashMap</font>s. Eventually, each <font
+            face="Courier New, Courier, monospace">HashMap</font> will
+          store the identifiers declared in one scope in the program
+          being compiled.<br>
+          <br>
+          The <font face="Courier New, Courier, monospace">HashMap</font>
+          keys are <font face="Courier New, Courier, monospace">String</font>s
+          (the declared identifier names) and the associated information
+          are <font face="Courier New, Courier, monospace">SymInfo</font>
+          objects. For now, the only information in a <font
+            face="Courier New, Courier, monospace">SymInfo</font> will
+          be the type of the identifier, represented using a <font
+            face="Courier New, Courier, monospace">Type</font> object.
+          Later on, you will enrich the <font face="Courier New,
+            Courier, monospace">SymInfo</font> class to store more
+          information.<br>
+          <br>
+          The <font face="Courier New, Courier, monospace">DuplicateSymException</font>
+          and <font face="Courier New, Courier, monospace">EmptySymTableException</font>
+          classes define exceptions that can be thrown by methods of the
+          <font face="Courier New, Courier, monospace">SymTable</font>
+          class.<br>
+        </font></p>
+      <h3><font face="Helvetica, Arial, sans-serif">The <font
+            face="Courier New, Courier, monospace">Type</font> class<br>
+        </font></h3>
+      <p><font face="Helvetica, Arial, sans-serif">You must implement a
+          <font face="Courier New, Courier, monospace">Type</font> class
+          such that you can identify the following types: <font
+            face="Courier New, Courier, monospace">Error</font> type,
+          Integer type, <font face="Courier New, Courier, monospace">Bool</font>
+          type, <font face="Courier New, Courier, monospace">Void</font>
+          type, <font face="Courier New, Courier, monospace">String</font>
+          type, <font face="Courier New, Courier, monospace">Function</font>
+          type, <font face="Courier New, Courier, monospace">Struct</font>
+          type, <font face="Courier New, Courier, monospace">Struct
+            Definition</font> type. A <font face="Courier New, Courier,
+            monospace">Type</font> object doesn't have any attribute
+          except the <font face="Courier New, Courier, monospace">Struct
+
+
+
+            Type</font> which stores the name of the corresponding <font
+            face="Courier New, Courier, monospace">struct</font> in the
+          form of an <font face="Courier New, Courier, monospace">IdNode</font>
+          (see <font face="Courier New, Courier, monospace">ast.java</font>).
+
+
+
+          Given a <font face="Courier New, Courier, monospace">Type</font>
+          object, we only need to know what kind of type it is. To
+          achieve that, you should manage to define height <font
+            face="Courier New, Courier, monospace">isXXX</font>
+          functions: <font face="Courier New, Courier, monospace">isErrorType</font>,
+          <font face="Courier New, Courier, monospace">isIntType</font>,
+          <font face="Courier New, Courier, monospace">isBoolType</font>,
+          <font face="Courier New, Courier, monospace">isVoidType</font>,
+          <font face="Courier New, Courier, monospace">isStringType</font>,
+          <font face="Courier New, Courier, monospace">isFnType</font>,
+          <font face="Courier New, Courier, monospace">isStructType</font>,
+          <font face="Courier New, Courier, monospace">isStructDefType</font>.
+          Additionnally, you should override the methods <font
+            face="Courier New, Courier, monospace">equals</font> and <font
+            face="Courier New, Courier, monospace">toString</font>. You
+          are free to implement the <font face="Courier New, Courier,
+            monospace">Type</font> class the way you like. <br>
+        </font></p>
+      <h3><font face="Helvetica, Arial, sans-serif">The <font
+            face="Courier New, Courier, monospace">SymInfo</font> class</font><br>
+      </h3>
+      <p><font face="Helvetica, Arial, sans-serif">You must implement
+          the following <font face="Courier New, Courier, monospace">SymInfo</font>
+          constructor and public methods (and no other public or
+          protected methods):<br>
+        </font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">SymInfo(InfoType
+              type)</font> : this is the constructor; it should
+            initialize the <font face="Courier New, Courier, monospace">SymInfo</font>
+            to have the given type.</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">Type getType()</font>&nbsp;
+
+
+
+            : return this <font face="Courier New, Courier, monospace">SymInfo</font>'s
+
+
+
+            type.</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">String toString()</font>
+            :&nbsp; return this <font face="Courier New, Courier,
+              monospace">SymInfo</font>'s type as a <font face="Courier
+              New, Courier, monospace">String</font> (this method will
+            be changed later in a future lab when more information is
+            stored in a <font face="Courier New, Courier, monospace">SymInfo</font>).</font></li>
+      </ul>
+      <h3><font face="Helvetica, Arial, sans-serif">The <font
+            face="Courier New, Courier, monospace">SymTable</font> class</font><br>
+      </h3>
+      <p><font face="Helvetica, Arial, sans-serif">The <font
+            face="Courier New, Courier, monospace">SymTable</font> must
+          be implemented using a <font face="Courier New, Courier,
+            monospace">List</font> of <font face="Courier New, Courier,
+            monospace">HashMap</font>s. (think about the operations that
+          will be done on a <font face="Courier New, Courier,
+            monospace">SymTable</font> ) The <font face="Courier New,
+            Courier, monospace">HashMap</font>s must map a <font
+            face="Courier New, Courier, monospace">String</font> to a <font
+            face="Courier New, Courier, monospace">SymInfo</font>. This
+          means that the <font face="Courier New, Courier, monospace">SymTable</font>
+          class will have a (private) field of type <font face="Courier
+            New, Courier, monospace">List&lt;HashMap&lt;String,SymInfo&gt;&gt;</font>.<br>
+          <br>
+          You must implement the following <font face="Courier New,
+            Courier, monospace">SymTable</font> constructor and public
+          methods (and no other public or protected methods):<br>
+        </font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">SymTable()</font> :
+            &nbsp; this is the constructor; it should initialize the
+            SymTable's List field to contain a single, empty HashMap.</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">void addDecl(String
+              name, SymInfo sym) throws DuplicateSymException,
+              EmptySymTableException</font>&nbsp; :&nbsp; if this
+            SymTable's list is empty, throw an <font face="Courier New,
+              Courier, monospace">EmptySymTableException.</font> If
+            either <font face="Courier New, Courier, monospace">name</font>
+            or <font face="Courier New, Courier, monospace">sym</font>
+            (or both) is null, throw a <font face="Courier New,
+              Courier, monospace">NullPointerException</font>. If the
+            first <font face="Courier New, Courier, monospace">HashMap</font>
+            in the list already contains the given name as a key, throw
+            a <font face="Courier New, Courier, monospace">DuplicateSymException</font>.
+            Otherwise, add the given <font face="Courier New, Courier,
+              monospace">name</font> and <font face="Courier New,
+              Courier, monospace">sym</font> to the first <font
+              face="Courier New, Courier, monospace">HashMap</font> in
+            the list.</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">void addScope()</font>
+            :&nbsp; add a new, empty <font face="Courier New, Courier,
+              monospace">HashMap</font> to the front of the list.</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">SymInfo
+              lookupLocal(String name)</font> : &nbsp; if this <font
+              face="Courier New, Courier, monospace">SymTable</font>'s
+            list is empty, throw an <font face="Courier New, Courier,
+              monospace">EmptySymTableException</font>. Otherwise, if
+            the first <font face="Courier New, Courier, monospace">HashMap</font>
+            in the list contains <font face="Courier New, Courier,
+              monospace">name</font> as a key, return the associated <font
+              face="Courier New, Courier, monospace">SymInfo</font>;
+            otherwise, return null.</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">SymInfo
+              lookupGlobal(String name)</font>&nbsp; :&nbsp; if this <font
+              face="Courier New, Courier, monospace">SymTable</font>'s
+            list is empty, throw an <font face="Courier New, Courier,
+              monospace">EmptySymTableException</font>. If any <font
+              face="Courier New, Courier, monospace">HashMap</font> in
+            the list contains name as a key, return the first associated
+            <font face="Courier New, Courier, monospace">SymInfo</font>
+            (i.e., the one from the <font face="Courier New, Courier,
+              monospace">HashMap</font> that is closest to the front of
+            the list); otherwise, return null.</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">void removeScope()
+              throws EmptySymTableException</font> : &nbsp; if this <font
+              face="Courier New, Courier, monospace">SymTable</font>'s
+            list is empty, throw an <font face="Courier New, Courier,
+              monospace">EmptySymTableException</font>; otherwise,
+            remove the <font face="Courier New, Courier, monospace">HashMap</font>
+            from the front of the list. To clarify, throw an exception
+            only if before attempting to remove, the list is empty (i.e.
+            there are no <font face="Courier New, Courier, monospace">HashMap</font>s
+            to remove).</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">void print()</font>&nbsp;
+
+
+
+            :&nbsp; this method is for debugging. First, print <font
+              face="Courier New, Courier, monospace">“\nSym Table\n”</font>.
+            Then, for each <font face="Courier New, Courier, monospace">HashMap</font>
+            in the list, print it, print a newline. Finally, print one
+            more newline. All output should go to <font face="Courier
+              New, Courier, monospace">System.out</font>.</font></li>
+      </ul>
+      <h3><font face="Helvetica, Arial, sans-serif">The <font
+            face="Courier New, Courier, monospace">
+            DuplicateSymException</font> and <font face="Courier New,
+            Courier, monospace">EmptySymTableException</font> classes</font><br>
+      </h3>
+      <p><font face="Helvetica, Arial, sans-serif">These two classes
+          will simply define the two checked exceptions that can be
+          thrown by the <font face="Courier New, Courier, monospace">SymTable</font>
+          class. Each exception must be able to be created using a
+          constructor that takes no arguments.<br>
+        </font></p>
+      <h3><font face="Helvetica, Arial, sans-serif">The <font
+            face="Courier New, Courier, monospace">IdNode</font> class<br>
+        </font></h3>
+      <p><font face="Helvetica, Arial, sans-serif">The <font
+            face="Courier New, Courier, monospace">IdNode</font> class
+          is defined in the <font face="Courier New, Courier,
+            monospace">ast.java</font> file. You must change this class
+          and add the following methods:<br>
+        </font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">public void
+              link(SymInfo info)</font> : link the given <font
+              face="Courier New, Courier, monospace">SymInfo</font> to
+            the <font face="Courier New, Courier, monospace">IdNode</font>
+            (i.e. store this <font face="Courier New, Courier,
+              monospace">SymInfo</font> as attribute)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">public SymInfo info()</font>
+            : return the <font face="Courier New, Courier, monospace">SymInfo</font>
+            linked to this <font face="Courier New, Courier, monospace">IdNode</font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">public String
+              name()</font> : return the name (a <font face="Courier
+              New, Courier, monospace">String</font>) of this <font
+              face="Courier New, Courier, monospace">IdNode</font></font></li>
+      </ul>
+      <p><font face="Helvetica, Arial, sans-serif">Those changes will be
+          useful for the next labs.<br>
+        </font></p>
+      <h3><font face="Helvetica, Arial, sans-serif">The <font
+            face="Courier New, Courier, monospace">Main</font> class</font></h3>
+      <font face="Helvetica, Arial, sans-serif">The provided Main class
+        is for testing. You can run the main method of that class by
+        issuing a make test in the lab 4 folder. The expected output is
+        as follow:<br>
+      </font>
+      <blockquote><font face="Helvetica, Arial, sans-serif"><font
+            face="Courier New, Courier, monospace">Sym Table</font></font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">{}</font></font><br>
+        <br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">Sym Table</font></font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">{ddd=double}</font></font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">{ccc=void}</font></font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">{aaa=bool, bbb=int}</font></font><br>
+        <br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">Sym Table</font></font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">{ccc=void}</font></font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">{aaa=bool, bbb=int}</font></font><br>
+        <br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">Sym Table</font></font><br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">{aaa=bool, bbb=int}</font></font><br>
+        <br>
+        <font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">Sym Table</font></font><br>
+      </blockquote>
+      <font face="Helvetica, Arial, sans-serif">Your code should produce
+        exactly this output.<br>
+      </font><font face="Helvetica, Arial, sans-serif"><span
+          style="font-size: 12pt; font-family: &quot;Times New
+          Roman&quot;,&quot;serif&quot;;"></span></font><font
+        face="Helvetica, Arial, sans-serif"><span style="font-size:
+          12pt; font-family: &quot;Times New
+          Roman&quot;,&quot;serif&quot;;"></span></font><font
+        face="Helvetica, Arial, sans-serif"><o:p></o:p></font>
+      <h3><font face="Helvetica, Arial, sans-serif"><o:p><big>What to
+              turn in</big></o:p></font></h3>
+      <font face="Helvetica, Arial, sans-serif">Turn in all your Java
+        sources (the <font face="Courier New, Courier, monospace">.java</font>
+        files) files plus the <font face="Courier New, Courier,
+          monospace">Makefile</font>.&nbsp; <b>Don't turn in any&nbsp;
+        </b><b><font face="Courier New, Courier, monospace">.class</font></b><b>&nbsp;&nbsp;
+
+
+
+          file!<br>
+          <br>
+        </b>To turn in your files, you <font color="#ff0000"><b>MUST
+            STRICTLY FOLLOW</b></font> those steps:<br>
+      </font>
+      <ol>
+        <li><font face="Helvetica, Arial, sans-serif">create a folder
+            name after your name (please use the English version of your
+            name, like&nbsp; <font face="Courier New, Courier,
+              monospace">MarcGaetano</font>)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">copy the files to
+            turn in into that folder</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">zip that folder:
+            in the terminal, go on the parent folder of your folder and
+            issue the command:&nbsp; <font face="Courier New, Courier,
+              monospace">zip -r YourFolder.zip </font></font><font
+            face="Helvetica, Arial, sans-serif"><font face="Courier New,
+              Courier, monospace">YourFolder/ </font>. This will
+            produce the archive file <font face="Courier New, Courier,
+              monospace">YourFolder.zip</font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif">upload the archive
+            <font face="Courier New, Courier, monospace">YourFolder.zip</font>
+            on the eLearning platform</font></li>
+      </ol>
+      <font face="Helvetica, Arial, sans-serif"><br>
+        <font color="#ff0000"><b>Labs turned in not following those ru</b><b>les
+
+
+
+
+
+
+
+
+
+            won't be graded!</b></font><br>
+      </font>
+      <h2><font face="Helvetica, Arial, sans-serif"> Supporting files</font></h2>
+      <font face="Helvetica, Arial, sans-serif"> The supporting files
+        are grabbed in the archive file <font face="Courier New,
+          Courier, monospace">lab<font face="Courier New, Courier,
+            monospace">4</font>.<font face="Courier New, Courier,
+            monospace">tar.gz</font></font><br>
+      </font><br>
+      <h3><o:p></o:p></h3>
+    </div>
+  </body>
+</html>

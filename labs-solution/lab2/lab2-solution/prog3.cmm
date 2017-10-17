@@ -1,0 +1,15 @@
+int x;
+int y;
+
+x = 123;
+y = 321;
+
+// if statement
+
+if ( x <= y ) {
+  cout << x; # x is the min
+}
+else {
+  cout << y; # y is the min
+}
+

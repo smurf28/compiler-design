@@ -1,0 +1,902 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/TR/REC-html40"
+  xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <meta name="ProgId" content="Word.Document">
+    <meta name="Generator" content="Microsoft Word 12">
+    <meta name="Originator" content="Microsoft Word 12">
+    <link rel="File-List"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/filelist.xml">
+    <title>Lab #1</title>
+    <!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>reges</o:Author>
+  <o:LastAuthor>Stuart Reges</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:LastPrinted>2009-01-13T22:05:00Z</o:LastPrinted>
+  <o:Created>2010-01-12T21:22:00Z</o:Created>
+  <o:LastSaved>2010-01-12T21:22:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>639</o:Words>
+  <o:Characters>3863</o:Characters>
+  <o:Company>CSE</o:Company>
+  <o:Lines>32</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4494</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+    <link rel="themeData"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/themedata.thmx">
+    <link rel="colorSchemeMapping"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/colorschememapping.xml">
+    <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+   <w:DontUseIndentAsNumberingTabStop/>
+   <w:FELineBreak11/>
+   <w:WW11IndentRules/>
+   <w:DontAutofitConstrainedTables/>
+   <w:AutofitLikeWW11/>
+   <w:HangulWidthLikeWW11/>
+   <w:UseNormalStyleForList/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="0" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="0" Name="No List"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+    <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.25in .5in .25in .5in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1125197784;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1780164454 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+  </style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+  </head>
+  <body style="" lang="EN-US">
+    <div class="Section1">
+      <p class="MsoNormal" style="text-align: right;" align="right"><span
+          class="GramE"></span><font face="Helvetica, Arial, sans-serif"><b
+            style=""><span style="font-size: 18pt;"><small><small>Lab #1</small></small><o:p></o:p></span></b></font>
+        <font face="Helvetica, Arial, sans-serif"> </font> </p>
+      <p class="MsoNormal" style="text-align: center;" align="center"><br>
+        <font face="Helvetica, Arial, sans-serif"><b style=""><span
+              style="font-size: 18pt;"></span></b></font></p>
+      <p class="MsoNormal" style="text-align: center;" align="center"><br>
+        <font face="Helvetica, Arial, sans-serif"><b style=""><span
+              style="font-size: 18pt;"> <o:p></o:p></span></b></font></p>
+      <font face="Helvetica, Arial, sans-serif"> </font>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">This lab will give you
+            practice with:</span></font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">writing a scanner</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">using a map</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">using a Makefile<br>
+            </span></font></li>
+      </ul>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Thanks to this lab, you will
+            figure out how tedious it is to write a scanner from scratch
+            and you'll be happy in the next labs to use JLex, a Java
+            scanner generator.</span></font><font face="Helvetica,
+          Arial, sans-serif"><span style="font-size: 12pt; font-family:
+            &quot;Times New Roman&quot;,&quot;serif&quot;;"></span></font><br>
+      </p>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>Objectives<br>
+          </big></font></h3>
+      <font face="Helvetica, Arial, sans-serif"><span style="font-size:
+          12pt; font-family: &quot;Times New
+          Roman&quot;,&quot;serif&quot;;"></span></font>
+      <h3><font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;"></span></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;"></span></font><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Given an English text in
+            form of a text file, you are to design a program to compute
+            the list of all the words appearing in the text. For each
+            word, you are to display a list of pairs (called
+            information). A pair (information) is made of two integers,
+            a line number (the line where the word appears) and a
+            character position (the position of the first character of
+            the word on the line). For example, given the following text
+            file (all text are excerpts from <i>THE PICTURE OF DORIAN
+              GRAY</i> by Oscar Wilde):</span></font><br>
+      </p>
+      <h3><font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;"></span></font></h3>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Courier New, Courier, monospace"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">"I don't think I shall
+              send it anywhere," he answered, tossing his<br>
+              head back in that odd way that used to make his friends
+              laugh at him<br>
+              at Oxford. "No; I won't send it anywhere."</span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><br>
+            </span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">you program should output
+            the following information:</span></font><span
+          style="font-size: 12pt; font-family: &quot;Times New
+          Roman&quot;,&quot;serif&quot;;"></span></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><tt><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">&nbsp; </span></tt><font
+            face="Courier New, Courier, monospace"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">answered (1): [1:46] <br>
+              &nbsp; anywhere (2): [1:32] [3:33] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at (2): [2:63]
+              [3:1] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; back (1): [2:6] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp; don't (1): [1:4] <br>
+              &nbsp;&nbsp; friends (1): [2:49] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; he (1): [1:43]
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; head (1): [2:1] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; him (1): [2:66] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; his (2): [1:64]
+              [2:45] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i (3):
+              [1:2] [1:16] [3:17] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in (1): [2:11]
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; it (2): [1:29]
+              [3:30] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp; laugh (1): [2:57] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; make (1): [2:40] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; no (1): [3:13]
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; odd (1): [2:19] <br>
+              &nbsp;&nbsp;&nbsp; oxford (1): [3:4] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; send (2): [1:24] [3:25] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp; shall (1): [1:18] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that (2): [2:14] [2:27] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp; think (1): [1:10] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to (1): [2:37]
+              <br>
+              &nbsp;&nbsp; tossing (1): [1:56] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; used (1): [2:32] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; way (1): [2:23] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp; won't (1): [3:19]&nbsp; </span><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"></span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><br>
+            </span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">For example, the second line
+            of output:</span></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><tt><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">&nbsp;&nbsp;&nbsp; </span></tt><font
+          face="Courier New, Courier, monospace"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">anywhere (2): [1:32] [3:33]
+          </span></font><br>
+        <font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;"></span></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">tells us that the word <font
+              face="Courier New, Courier, monospace">anywhere</font>
+            appears two times in the text (see the "(2)"), at line 1
+            position 32, and at line 3 position 33.&nbsp; All the words
+            have been turned into lower case. Notice that all non-letter
+            characters have been ignored except the character quote ( '
+            ) when it's part of a word like in <font face="Courier New,
+              Courier, monospace">don't</font> or <font face="Courier
+              New, Courier, monospace">won't</font>. For example, given
+            the following input:<br>
+          </span></font></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Courier New, Courier, monospace"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">Don't you ever do 'THAT'
+              again else you'll be<br>
+              listening to me saying 'you're fired!!!'</span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">leads to the following
+            output:<br>
+          </span></font></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;"><font face="Courier New,
+                Courier, monospace">&nbsp;&nbsp;&nbsp;&nbsp; again (1):
+                [1:26] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; be (1):
+                [1:44] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do (1):
+                [1:16] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; don't (1): [1:1] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else (1): [1:32] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ever (1): [1:11] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; fired (1): [2:32] <br>
+                &nbsp;listening (1): [2:1] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; me (1):
+                [2:14] <br>
+                &nbsp;&nbsp;&nbsp; saying (1): [2:17] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that (1): [1:20] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to (1):
+                [2:11] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you (1): [1:7] <br>
+                &nbsp;&nbsp;&nbsp; you'll (1): [1:37] <br>
+                &nbsp;&nbsp;&nbsp; you're (1): [2:25] </font><br>
+            </span></font></p>
+      </blockquote>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">The scanner you'll design
+            must ignore any non-letter character (except the quote
+            inside a word) including space, tab and newline characters.
+            For example, the following input:<br>
+          </span></font></p>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;"></span></font></p>
+      <table width="207" height="204" align="center" cellspacing="2"
+        cellpadding="2" border="1">
+        <tbody>
+          <tr>
+            <td valign="top"><font face="Helvetica, Arial, sans-serif"><span
+                  style="font-size: 12pt; font-family: &quot;Times New
+                  Roman&quot;,&quot;serif&quot;;"><font face="Courier
+                    New, Courier, monospace">This&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+                    is</font></span></font><br>
+              <font face="Helvetica, Arial, sans-serif"><span
+                  style="font-size: 12pt; font-family: &quot;Times New
+                  Roman&quot;,&quot;serif&quot;;"></span></font><br>
+              <font face="Helvetica, Arial, sans-serif"><span
+                  style="font-size: 12pt; font-family: &quot;Times New
+                  Roman&quot;,&quot;serif&quot;;"><font face="Courier
+                    New, Courier, monospace">, ;&nbsp;&nbsp; _ !&amp; @</font></span></font><br>
+              <div align="center"><font face="Helvetica, Arial,
+                  sans-serif"><span style="font-size: 12pt; font-family:
+                    &quot;Times New Roman&quot;,&quot;serif&quot;;"></span></font><br>
+              </div>
+              <font face="Helvetica, Arial, sans-serif"><span
+                  style="font-size: 12pt; font-family: &quot;Times New
+                  Roman&quot;,&quot;serif&quot;;"></span></font><br>
+              <font face="Helvetica, Arial, sans-serif"><span
+                  style="font-size: 12pt; font-family: &quot;Times New
+                  Roman&quot;,&quot;serif&quot;;"><font face="Courier
+                    New, Courier, monospace">a:very&nbsp; strange</font></span></font><br>
+              <font face="Helvetica, Arial, sans-serif"><span
+                  style="font-size: 12pt; font-family: &quot;Times New
+                  Roman&quot;,&quot;serif&quot;;"><font face="Courier
+                    New, Courier, monospace">%</font></span></font><br>
+              <font face="Helvetica, Arial, sans-serif"><span
+                  style="font-size: 12pt; font-family: &quot;Times New
+                  Roman&quot;,&quot;serif&quot;;"><font face="Courier
+                    New, Courier, monospace">?</font></span></font><br>
+              <font face="Helvetica, Arial, sans-serif"><span
+                  style="font-size: 12pt; font-family: &quot;Times New
+                  Roman&quot;,&quot;serif&quot;;"><font face="Courier
+                    New, Courier, monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+                    file</font></span></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><br>
+        <font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">(the file has many space,
+            tab and newline characters inside) gives the following
+            output:<br>
+          </span></font></p>
+      <blockquote>
+        <p class="MsoPlainText" style="margin-top: 12pt;"><font
+            face="Courier New, Courier, monospace"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+              a (1): [6:1] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file (1): [9:13] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is (1): [1:17]
+              <br>
+              &nbsp;&nbsp; strange (1): [6:9] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this (1): [1:1] <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; very (1): [6:3]</span></font></p>
+      </blockquote>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>Getting started<br>
+          </big></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">In order to set up your
+            environment for this lab and for all the comings labs you
+            are first to follow those steps:</span></font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">move into your home
+              directory (in the terminal, this can be achieved by
+              issuing the command <font face="Courier New, Courier,
+                monospace">cd</font>)</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">create a new folder named
+              compiler (</span></font><font face="Helvetica, Arial,
+            sans-serif"><span style="font-size: 12pt; font-family:
+              &quot;Times New Roman&quot;,&quot;serif&quot;;">in the
+              terminal, this can be achieved by issuing the command <font
+                face="Courier New, Courier, monospace">mkdir compiler</font>)</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">move into that folder </span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">(</span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">in the terminal, this can
+              be achieved by issuing the command <font face="Courier
+                New, Courier, monospace">cd compiler</font>)</span></font></li>
+      </ul>
+      <p><font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">Everything you'll do from
+            now on should be located inside that folder. As for lab #1,
+            perform the following steps:<br>
+          </span></font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif">download the
+            archive <font face="Courier New, Courier, monospace">lab1.tar.gz</font>
+            (see the supporting files section below)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">move this archive
+            inside the <font face="Courier New, Courier, monospace">~/compiler</font>
+            folder </font><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">(</span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">in the terminal, this can
+              be achieved by issuing the command&nbsp; <font
+                face="Courier New, Courier, monospace"><font
+                  face="Courier New, Courier, monospace">mv ~/Downl<font
+                    face="Courier New, Courier, monospace">oads/lab1.tar.gz</font></font>
+                ~/compiler</font>)</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">move into the <font
+                face="Courier New, Courier, monospace">~/compiler</font>
+              folder </span></font><font face="Helvetica, Arial,
+            sans-serif"><span style="font-size: 12pt; font-family:
+              &quot;Times New Roman&quot;,&quot;serif&quot;;">(</span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">in the terminal, this can
+              be achieved by issuing the command <font face="Courier
+                New, Courier, monospace">cd compiler</font>)</span></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">extract the archive there
+            </span></font><font face="Helvetica, Arial, sans-serif"><span
+              style="font-size: 12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">(</span></font><font
+            face="Helvetica, Arial, sans-serif"><span style="font-size:
+              12pt; font-family: &quot;Times New
+              Roman&quot;,&quot;serif&quot;;">in the terminal, this can
+              be achieved by issuing the command <font face="Courier
+                New, Courier, monospace"><font face="Courier New,
+                  Courier, monospace">tar x<font face="Courier New,
+                    Courier, monospace">vf</font></font> <font
+                  face="Courier New, Courier, monospace">lab1.tar.gz</font></font>)</span></font></li>
+      </ul>
+      <ul>
+      </ul>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>What to do</big></font></h3>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">You should complete the
+            provided class skeletons to be able to run the provided <font
+              face="Courier New, Courier, monospace">Main</font> class
+            (do not change this class except the path of the input
+            file). In addition you should design a <font face="Courier
+              New, Courier, monospace">Makefile</font> , again by
+            completing the provided <font face="Courier New, Courier,
+              monospace">Makefile</font> skeleton. For the <font
+              face="Courier New, Courier, monospace">WordCount</font>
+            class, you are to use a <font face="Courier New, Courier,
+              monospace">Map</font> to pair strings with a list of
+            information. You can experiment two flavors of <font
+              face="Courier New, Courier, monospace">Map</font>, the <font
+              face="Courier New, Courier, monospace">TreeMap</font> and
+            the <font face="Courier New, Courier, monospace">HashMap</font>
+            (you will check the difference between those two classes).<br>
+          </span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><span
+            style="font-size: 12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;"></span></font><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;"></span></font><font
+          face="Helvetica, Arial, sans-serif"><o:p><big>What to turn in</big></o:p></font></h3>
+      <font face="Helvetica, Arial, sans-serif">Turn in all your Java
+        sources (the <font face="Courier New, Courier, monospace">.java</font>
+        files) files ONLY plus the <font face="Courier New, Courier,
+          monospace">Makefile</font>.&nbsp; <b>Don't turn in any&nbsp;
+        </b><b><font face="Courier New, Courier, monospace">.class</font></b><b>&nbsp;
+
+
+
+
+
+          or&nbsp; <font face="Courier New, Courier, monospace">.txt&nbsp;</font>
+          file!<br>
+          <br>
+        </b>To turn in your files, you <font color="#ff0000"><b>MUST
+            STRICTLY FOLLOW</b></font> those steps:<br>
+      </font>
+      <ol>
+        <li><font face="Helvetica, Arial, sans-serif">create a folder
+            name after your name (please use the English version of your
+            name, like&nbsp; <font face="Courier New, Courier,
+              monospace">MarcGaetano</font>)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">copy the files to
+            turn in into that folder</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">zip that folder:
+            in the terminal, go on the parent folder of your folder and
+            issue the command:&nbsp; <font face="Courier New, Courier,
+              monospace">zip -r YourFolder.zip </font></font><font
+            face="Helvetica, Arial, sans-serif"><font face="Courier New,
+              Courier, monospace">YourFolder/ </font>. This will
+            produce the archive file <font face="Courier New, Courier,
+              monospace">YourFolder.zip</font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif">upload the archive
+            <font face="Courier New, Courier, monospace">YourFolder.zip</font>
+            on the eLearning platform</font></li>
+      </ol>
+      <font face="Helvetica, Arial, sans-serif"><br>
+        <font color="#ff0000"><b>Labs turned in not following those ru</b><b>les
+
+
+
+
+            won't be graded!</b></font><br>
+      </font>
+      <h2><font face="Helvetica, Arial, sans-serif"> Supporting files</font></h2>
+      <font face="Helvetica, Arial, sans-serif"> The supporting files
+        are the Java classes skeleton you are to complete, plus a number
+        of example text files with the corresponding expected output (<font
+          face="Courier New, Courier, monospace">outputN.txt </font>is
+        the expected output for <font face="Courier New, Courier,
+          monospace">textN.txt </font>input file). All the supporting
+        files are grabbed into the archive <font face="Courier New,
+          Courier, monospace">lab1.tar.gz</font> you need to download
+        and extract inside the <font face="Courier New, Courier,
+          monospace">~/compiler</font> folder.<br>
+      </font><br>
+      <h3><o:p></o:p></h3>
+    </div>
+  </body>
+</html>

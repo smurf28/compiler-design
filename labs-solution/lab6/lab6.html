@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <title></title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <font face="Helvetica, Arial, sans-serif">For this assignment you
+      will write a <b>type-checker</b> for C-- programs represented as
+      abstract-syntax trees. Your main task will be to write type check
+      methods for the nodes of the AST. <br>
+    </font>
+    <h2><font face="Helvetica, Arial, sans-serif">Getting started</font></h2>
+    <font face="Helvetica, Arial, sans-serif">Skeleton files on which
+      you should build are in the lab6.tar.gz archive file (see below in
+      the supporting files section). This archive contains:<br>
+    </font>
+    <ul>
+      <li><font face="Courier New, Courier, monospace">cmm.jlex</font><font
+          face="Helvetica, Arial, sans-serif">: a JLex specification for
+          the C-- language (solution to lab #2). Use this file if there
+          were problems with your JLex specification from lab #2</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">cmm.cup</font>: a Java CUP
+          specification for&nbsp; the C-- language <font
+            face="Helvetica, Arial, sans-serif">(solution to lab #3).
+            Use this file if there were problems with your<font
+              face="Courier New, Courier, monospace"> cmm.cup </font>specification
+
+
+            from lab #3</font> </font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">ast.java</font>: this file contains
+          class definitions for the AST structure built by the parser
+          together with name analysis methods&nbsp; </font><font
+          face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+            Arial, sans-serif"><font face="Helvetica, Arial, sans-serif">(solution
+
+              to lab #<font face="Helvetica, Arial, sans-serif">5</font>).
+
+              Use this file if there were problems with your <font
+                face="Courier New, Courier, monospace">ast.java</font>
+              file from lab #5</font></font>. You will need to complete
+          this file, mainly by adding the <font face="Courier New,
+            Courier, monospace">typeCheck</font> method to most of the
+          classes</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">Type.java</font>: a file for the
+          class <font face="Courier New, Courier, monospace">Type</font>
+          and its sub-classes. These classes are the same as for lab #5.
+        </font><font face="Helvetica, Arial, sans-serif"><font
+            face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+              Arial, sans-serif">Use this file if there were problems
+              with your <font face="Courier New, Courier, monospace"><font
+                  face="Courier New, Courier, monospace">Type</font>.java</font>
+              file from lab #5</font></font></font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">SymInfo.java</font>: a file for the
+          class <font face="Courier New, Courier, monospace">SymInfo</font>
+          and its sub-classes (solution to lab #5).&nbsp; </font><font
+          face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+            Arial, sans-serif"><font face="Helvetica, Arial, sans-serif"><font
+                face="Helvetica, Arial, sans-serif"></font>Use this file
+              if there were problems with your <font face="Courier New,
+                Courier, monospace">Sym<font face="Courier New, Courier,
+                  monospace">Info</font></font> class from lab #<font
+                face="Helvetica, Arial, sans-serif">5</font></font></font></font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">SymTable.java</font>: a file for
+          the class <font face="Courier New, Courier, monospace">SymTable</font>
+        </font><font face="Helvetica, Arial, sans-serif"><font
+            face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+              Arial, sans-serif">(solution to lab #4). Use this file if
+              there were problems with your <font face="Courier New,
+                Courier, monospace">SymTable</font> class from lab #4</font></font>
+        </font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">Main.java</font>: the main program
+          that calls the parser, then, for a successful parse, calls the
+          name analysis, then the <b>type-checker</b> and finally the
+          unparser. You don't need to change this file</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">ErrMsg.java</font>:&nbsp; </font><font
+          face="Helvetica, Arial, sans-serif">a file for the class <font
+            face="Courier New, Courier, monospace"><font face="Courier
+              New, Courier, monospace">ErrMsg</font></font> (solution to
+          lab #5).&nbsp; </font><font face="Helvetica, Arial,
+          sans-serif"><font face="Helvetica, Arial, sans-serif"><font
+              face="Helvetica, Arial, sans-serif">Use this file if there
+              were problems with your <font face="Courier New, Courier,
+                monospace"><font face="Courier New, Courier, monospace"><font
+                    face="Courier New, Courier, monospace">ErrMsg</font></font></font>
+              class from lab #<font face="Helvetica, Arial, sans-serif">5</font></font></font></font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">SyntaxErrorException.java</font>:&nbsp;
+
+
+        </font><font face="Helvetica, Arial, sans-serif"><font
+            face="Helvetica, Arial, sans-serif">same class as for lab
+            #3.&nbsp;</font> You don't need to change this file</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">DuplicateSymException</font> and <font
+            face="Courier New, Courier, monospace">EmptySymTableException</font>:
+        </font><font face="Helvetica, Arial, sans-serif"><font
+            face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+              Arial, sans-serif">same classes as for lab #4.&nbsp;</font>
+            You don't need to change these files</font></font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">Makefile</font>: a <i>Makefile</i>
+          for lab #6. You don't need to change this file</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">progN.cmm</font> and <font
+            face="Courier New, Courier, monospace">progN.cmm.out</font>:
+          some example files of small C-- programs (<font face="Courier
+            New, Courier, monospace">progN.cmm</font>) together with the
+          result of the name analysis and unparsing methods (<font
+            face="Courier New, Courier, monospace">progN.cmm.out</font>).
+
+
+          Those files type-check correctly. You will have to add more <font
+            face="Courier New, Courier, monospace">.cmm</font> (and
+          generate more <font face="Courier New, Courier, monospace">.cmm.out</font>)
+          files by yourself</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><font face="Courier
+            New, Courier, monospace">eprogN.cmm</font> and <font
+            face="Courier New, Courier, monospace">eprogN.cmm.out</font>:
+          some example files of small C-- programs (<font face="Courier
+            New, Courier, monospace">eprogN.cmm</font>) together with
+          the result of the name analysis, the type-checking and
+          unparsing methods (<font face="Courier New, Courier,
+            monospace">eprogN.cmm.out</font>). Those files have type
+          errors which must be detected by your type-checker. You will
+          have to add more <font face="Courier New, Courier, monospace">.cmm</font>
+          (and generate more <font face="Courier New, Courier,
+            monospace">.cmm.out</font>) files by yourself</font></li>
+    </ul>
+    <h2><font face="Helvetica, Arial, sans-serif">Specifications</font></h2>
+    <font face="Helvetica, Arial, sans-serif">The type checker will
+      determine the type of every expression represented in the
+      abstract-syntax tree and will use that information to identify
+      type errors. In the language we have the following types:<br>
+    </font>
+    <blockquote><font face="Helvetica, Arial, sans-serif"><font
+          face="Courier New, Courier, monospace">int</font>, <font
+          face="Courier New, Courier, monospace">bool</font>, <font
+          face="Courier New, Courier, monospace">void</font> (as
+        function return types only), <font face="Courier New, Courier,
+          monospace">struct</font> types, and <i>function</i> types</font><br>
+    </blockquote>
+    <font face="Helvetica, Arial, sans-serif">A <font face="Courier
+        New, Courier, monospace">struct</font> type includes the name of
+      the <font face="Courier New, Courier, monospace">struct</font>
+      (i.e., when it was declared/defined). A <i>function</i> type
+      includes the types of the parameters and the <i>return</i> type.<br>
+      <br>
+      The operators in the language are divided into the following
+      categories:<br>
+    </font>
+    <ul>
+      <li><font face="Helvetica, Arial, sans-serif">logical:<font
+            face="Courier New, Courier, monospace"> !</font>, <font
+            face="Courier New, Courier, monospace">&amp;&amp;</font>, <font
+            face="Courier New, Courier, monospace">|| <font
+              face="Helvetica, Arial, sans-serif">(not, and, or). A root
+              class <font face="Courier New, Courier, monospace">LogicalExpNode</font>
+              have been added in <font face="Courier New, Courier,
+                monospace">ast.java</font> for those operators (i.e.
+              nodes of the AST)</font></font><br>
+        </font></li>
+      <li><font face="Helvetica, Arial, sans-serif">arithmetic:&nbsp;<font
+            face="Courier New, Courier, monospace"> +</font>,<font
+            face="Courier New, Courier, monospace"> -</font>,<font
+            face="Courier New, Courier, monospace"> *</font>,<font
+            face="Courier New, Courier, monospace"> /</font>,<font
+            face="Courier New, Courier, monospace"> -</font>&nbsp;
+          (plus, minus, times, divide, unary minus). A root class <font
+            face="Courier New, Courier, monospace">ArithmeticExpNode</font>
+        </font><font face="Helvetica, Arial, sans-serif"><font
+            face="Courier New, Courier, monospace"><font
+              face="Helvetica, Arial, sans-serif">have been added in <font
+                face="Courier New, Courier, monospace">ast.java</font>
+              for those </font></font></font><font face="Helvetica,
+          Arial, sans-serif"><font face="Courier New, Courier,
+            monospace"><font face="Helvetica, Arial, sans-serif">operators
+              (i.e. nodes of the AST)</font></font></font></li>
+      <li><font face="Helvetica, Arial, sans-serif">equality:&nbsp; <font
+            face="Courier New, Courier, monospace">==</font>,<font
+            face="Courier New, Courier, monospace"> !=&nbsp;</font>
+          (equals, not equals). </font><font face="Helvetica, Arial,
+          sans-serif">A root class <font face="Courier New, Courier,
+            monospace">EqualityExpNode</font> </font><font
+          face="Helvetica, Arial, sans-serif"><font face="Courier New,
+            Courier, monospace"><font face="Helvetica, Arial,
+              sans-serif">have been added in <font face="Courier New,
+                Courier, monospace">ast.java</font> for those </font></font></font><font
+          face="Helvetica, Arial, sans-serif"><font face="Courier New,
+            Courier, monospace"><font face="Helvetica, Arial,
+              sans-serif">for those </font></font></font><font
+          face="Helvetica, Arial, sans-serif"><font face="Courier New,
+            Courier, monospace"><font face="Helvetica, Arial,
+              sans-serif">operators (i.e. nodes of the AST)</font></font></font></li>
+      <li><font face="Helvetica, Arial, sans-serif">relational:&nbsp; <font
+            face="Courier New, Courier, monospace">&lt;</font>,<font
+            face="Courier New, Courier, monospace"> &gt;</font>,<font
+            face="Courier New, Courier, monospace"> &lt;=</font>,<font
+            face="Courier New, Courier, monospace"> &gt;=</font> (less
+          than, greater than, less then or equals, greater than or
+          equals). </font><font face="Helvetica, Arial, sans-serif">A
+          root class <font face="Courier New, Courier, monospace">RelationalExpNode</font>
+        </font><font face="Helvetica, Arial, sans-serif"><font
+            face="Courier New, Courier, monospace"><font
+              face="Helvetica, Arial, sans-serif">have been added in <font
+                face="Courier New, Courier, monospace">ast.java</font>
+              for those </font></font></font><font face="Helvetica,
+          Arial, sans-serif"><font face="Courier New, Courier,
+            monospace"><font face="Helvetica, Arial, sans-serif">for
+              those </font></font></font><font face="Helvetica, Arial,
+          sans-serif"><font face="Courier New, Courier, monospace"><font
+              face="Helvetica, Arial, sans-serif">operators (i.e. nodes
+              of the AST)</font></font></font></li>
+      <li><font face="Helvetica, Arial, sans-serif">assignment:<font
+            face="Courier New, Courier, monospace"> = </font>(assign)</font></li>
+    </ul>
+    <font face="Helvetica, Arial, sans-serif">The type rules of the
+      language are as follows:<br>
+    </font>
+    <ul>
+      <li><font face="Helvetica, Arial, sans-serif"><b>logical operators
+            and conditions</b>: only boolean expressions can be used as
+          operands of logical operators or in the condition of an if or
+          while statement. The result of applying a logical operator to
+          bool operands is bool</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><b>arithmetic and
+            relational operators</b>: only integer expressions can be
+          used as operands of these operators. The result of applying an
+          arithmetic operator to int operand(s) is int. The result of
+          applying a relational operator to int operands is bool</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><b>equality
+            operators</b>: integer, boolean expressions or string
+          literal can be used as operands of these operators.
+          Furthermore, the types of both operands must be the same. The
+          result of applying an equality operator is bool</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><b>assignment
+            operator</b>: only integer or boolean expressions can be
+          used as operands of an assignment operator. Furthermore, the
+          types of the left-hand side and right-hand side must be the
+          same. The type of the result of applying the assignment
+          operator is the type of the right-hand side</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><b><font
+              face="Courier New, Courier, monospace">cout </font></b><b>and
+
+          </b><b><font face="Courier New, Courier, monospace">cin</font></b>:
+          only an <font face="Courier New, Courier, monospace">int</font>
+          or <font face="Courier New, Courier, monospace">bool</font>
+          expression or a string literal can be printed by <font
+            face="Courier New, Courier, monospace">cout</font>. Only an
+          <font face="Courier New, Courier, monospace">int</font> or <font
+            face="Courier New, Courier, monospace">bool</font> identifer
+          can be read by<font face="Courier New, Courier, monospace">
+            cin</font>. Note that the identifier can be a field of a <font
+            face="Courier New, Courier, monospace">struct</font> type
+          (accessed using the dor notation <font face="Courier New,
+            Courier, monospace">. </font>) as long as the field is an <font
+            face="Courier New, Courier, monospace">int</font> or a <font
+            face="Courier New, Courier, monospace">bool</font></font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><b>function calls</b>:
+          a function call can be made only using an identifier with
+          function type (i.e., an identifier that is the name of a
+          function). The number of actual parameters must match the
+          number of formals. The type of each actual must match the type
+          of the corresponding formal</font></li>
+      <li><font face="Helvetica, Arial, sans-serif"><b>function </b><b><i>returns</i></b>:</font></li>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif">a <font
+              face="Courier New, Courier, monospace">void</font>
+            function may not return a value</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">a non-<font
+              face="Courier New, Courier, monospace">void</font>
+            function may not have a return statement without a value</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">a function whose
+            return type is <font face="Courier New, Courier, monospace">int</font>
+            may only return an <font face="Courier New, Courier,
+              monospace">int</font> and a function whose return type is
+            <font face="Courier New, Courier, monospace">bool</font> may
+            only return a <font face="Courier New, Courier, monospace">bool</font></font></li>
+      </ul>
+    </ul>
+    <blockquote><font face="Helvetica, Arial, sans-serif">Some compilers
+        give error messages for non-<font face="Courier New, Courier,
+          monospace">void</font> functions that have paths from function
+        start to function end with no <font face="Courier New, Courier,
+          monospace">return</font> statement. For example, this code
+        would cause such an error:</font></blockquote>
+    <blockquote>
+      <blockquote><font face="Courier New, Courier, monospace">int f() {<br>
+          &nbsp;&nbsp;&nbsp; cout &lt;&lt; "hello";<br>
+          }</font><br>
+      </blockquote>
+      <font face="Helvetica, Arial, sans-serif">However, finding such
+        paths is beyond the capabilities of our compiler, so don't
+        process this kind of error!</font><br>
+    </blockquote>
+    <font face="Helvetica, Arial, sans-serif">You must implement your
+      type checker by writing appropriate <font face="Courier New,
+        Courier, monospace">typeCheck</font> methods for the different
+      sub-classes of ASTnode. Your type checker should find all of the
+      type errors described in the following table. It must report the
+      specified position of the error, and it must give exactly the
+      specified error message. Each message should appear on a single
+      line, rather than how it is formatted in the following table:<br>
+      <br>
+    </font>
+    <table class="regtable" width="1172" height="1477" align="center"
+      cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <th class="reg"><font face="Helvetica, Arial, sans-serif"><b>Type
+
+                of Error</b></font></th>
+          <th class="reg"><font face="Helvetica, Arial, sans-serif"><b>Error
+
+                Message</b></font></th>
+          <th class="reg"><font face="Helvetica, Arial, sans-serif"><b>Position
+
+                to Report</b></font></th>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Writing a function; e.g., "cout &lt;&lt; f", where f is a
+              function name. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Attempt
+
+              to write a function</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the function name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Writing a struct name; e.g., "cout &lt;&lt; P", where P is
+              the name of a struct type. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Attempt
+
+              to write a struct name</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the struct name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Writing a struct variable; e.g., "cout &lt;&lt; p", where
+              p is a variable declared to be of a struct type. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Attempt
+
+              to write a struct variable</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the struct variable. </font></td>
+        </tr>
+        <tr id="writeVoid">
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Writing a void value (note: this can only happen if there
+              is an attempt to write the return value from a void
+              function); e.g., "cout &lt;&lt; f()", where f is a void
+              function. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Attempt
+
+              to write void</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the function name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Reading a function: e.g., "cin &gt;&gt; f", where f is a
+              function name. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Attempt
+
+              to read a function</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the function name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Reading a struct name; e.g., "cin &gt;&gt; P", where P is
+              the name of a struct type. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Attempt
+
+              to read a struct name</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the struct name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Reading a struct variable; e.g., "cin &gt;&gt; p", where p
+              is a variable declared to be of a struct type. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Attempt
+
+              to read a struct variable</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the struct variable. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Calling something other than a function; e.g., "x();",
+              where x is not a function name. Note: In this case, you
+              should <em>not</em> type-check the actual parameters. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Attempt
+
+              to call a non-function</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the variable name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Calling a function with the wrong number of arguments.
+              Note: In this case, you should <em>not</em> type-check
+              the actual parameters. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Function
+
+              call with wrong number of args</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the function name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Calling a function with an argument of the wrong type.
+              Note: you should only check for this error if the number
+              of arguments is correct. If there are several arguments
+              with the wrong type, you must give an error message for
+              each such argument. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Type
+
+              of actual does not match type of formal</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first identifier or literal in the actual
+              parameter. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Returning from a non-void function with a plain return
+              statement (i.e., one that does not return a value). </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Missing
+
+              return value</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 0,0
+            </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Returning a value from a void function. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Return
+
+              with a value in a void function</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first identifier or literal in the
+              returned expression. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Returning a value of the wrong type from a non-void
+              function. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Bad
+
+              return value</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first identifier or literal in the
+              returned expression. </font></td>
+        </tr>
+        <tr id="incrDecrOps">
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Applying an arithmetic operator (+, -, *, /) to an operand
+              with type other than int. Note: this includes the ++ and
+              -- operators.</font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Arithmetic
+
+              operator applied to non-numeric operand</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first identifier or literal in an operand
+              that is an expression of the wrong type. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Applying a relational operator (&lt;, &gt;, &lt;=, &gt;=)
+              to an operand with type other than int. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Relational
+
+              operator applied to non-numeric operand</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first identifier or literal in an operand
+              that is an expression of the wrong type. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Applying a logical operator (!, &amp;&amp;, ||) to an
+              operand with type other than bool. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Logical
+
+              operator applied to non-bool operand</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first identifier or literal in an operand
+              that is an expression of the wrong type. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"> Using a non-<tt>bool</tt> expression as the
+            condition of an <tt>if</tt>. </td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Non-bool
+
+              expression used as an if condition</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first identifier or literal in the
+              condition. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"> Using a non-<tt>bool</tt> expression as the
+            condition of a <tt>while</tt>. </td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Non-bool
+
+              expression used as a while condition</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first identifier or literal in the
+              condition. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Applying an equality operator (==, !=) to operands of two
+              different types (e.g., "j == true", where j is of type
+              int), or assigning a value of one type to a variable of
+              another type (e.g., "j = true", where j is of type int). </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Type
+
+              mismatch</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first identifier or literal in the
+              left-hand operand. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Applying an equality operator (==, !=) to void function
+              operands (e.g., "f() == g()", where f and g are functions
+              whose return type is void). </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Equality
+
+              operator applied to void functions</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first function name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Comparing two functions for equality, e.g., "f == g" or "f
+              != g", where f and g are function names. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Equality
+
+              operator applied to functions</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first function name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Comparing two struct names for equality, e.g., "A == B" or
+              "A != B", where A and B are the names of struct types. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Equality
+
+              operator applied to struct names</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first struct name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Comparing two struct variables for equality, e.g., "a ==
+              b" or "a != b", where a and a are variables declared to be
+              of struct types. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Equality
+
+              operator applied to struct variables</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first struct variable. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Assigning a function to a function; e.g., "f = g;", where
+              f and g are function names. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Function
+
+              assignment</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first function name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Assigning a struct name to a struct name; e.g., "A = B;",
+              where A and B are the names of struct types. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Struct
+
+              name assignment</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first struct name. </font></td>
+        </tr>
+        <tr>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif">
+              Assigning a struct variable to a struct variable; e.g., "a
+              = b;", where a and b are variables declared to be of
+              struct types. </font></td>
+          <td class="reg"> <font face="Courier New, Courier, monospace">Struct
+
+              variable assignment</font> </td>
+          <td class="reg"><font face="Helvetica, Arial, sans-serif"> 1<sup>st</sup>
+              character of the first struct variable. </font></td>
+        </tr>
+      </tbody>
+    </table>
+    <font face="Helvetica, Arial, sans-serif"><br>
+      A single type error in an expression or statement should not
+      trigger multiple error messages. For example, assume that P is the
+      name of a <font face="Courier New, Courier, monospace">struct</font>
+      type, <font face="Courier New, Courier, monospace">p</font> is a
+      variable declared to be of <font face="Courier New, Courier,
+        monospace">struct</font> type <font face="Courier New, Courier,
+        monospace">P</font>, and <font face="Courier New, Courier,
+        monospace">f </font>is a function that has one <font
+        face="Courier New, Courier, monospace">int</font> parameter and
+      returns a <font face="Courier New, Courier, monospace">bool</font>.
+      Each of the following should cause only one error message:<br>
+    </font>
+    <blockquote><font face="Helvetica, Arial, sans-serif"><font
+          face="Courier New, Courier, monospace">cout &lt;&lt; P +
+          1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // P +
+          1 is an error; the write is OK</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">(true + 3) *
+          4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // true + 3
+          is an error; the * is OK</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">true &amp;&amp; (false || 3)&nbsp;&nbsp;
+          // false || 3 is an error; the &amp;&amp; is OK</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">f("a" *
+          4);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          // "a" * 4 is an error; the call is OK</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">1 +
+          p();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          // p() is an error; the + is OK</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">(true + 3) ==
+          x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // true + 3 is an
+          error; the == is OK</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          // regardless of the type of x</font></font><br>
+    </blockquote>
+    <font face="Helvetica, Arial, sans-serif">One way to accomplish this
+      is to use a special <font face="Courier New, Courier, monospace">ErrorType</font>
+      for expressions that contain type errors. In the second example
+      above, the type given to <font face="Courier New, Courier,
+        monospace">(true + 3)</font> should be <font face="Courier New,
+        Courier, monospace">ErrorType</font>, and the type-check method
+      for the multiplication node should <b>not</b> report <i>"Arithmetic
+
+        operator applied to non-numeric operand</i>" for the first
+      operand. But note that the following should each cause two error
+      messages (assuming the same declarations of f as above):<br>
+    </font>
+    <blockquote><font face="Helvetica, Arial, sans-serif"><font
+          face="Courier New, Courier, monospace">true +
+          "hello"&nbsp;&nbsp;&nbsp; // one error for each of the non-int
+          operands of the +</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">1 +
+          f(true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // one for the bad
+          arg type and one for the 2nd operand of the +</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">1 + f(1,
+          2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // one for the wrong
+          number of args and one for the 2nd operand of the +</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">return 3+true;&nbsp;&nbsp;&nbsp; // in a
+          void function: one error for the 2nd operand to +</font></font><br>
+      <font face="Helvetica, Arial, sans-serif"><font face="Courier New,
+          Courier, monospace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          // and one for returning a value</font></font><br>
+    </blockquote>
+    <font face="Helvetica, Arial, sans-serif">To provide some help with
+      this issue, there is an extended example input file in the
+      supporting files (see progN.cmm and eprogN.cmm). This is not meant
+      to a complete test of the type checker; it is provided merely to
+      help you understand some of the messages you need to report, and
+      to help you find small typos in your error messages. <br>
+      <br>
+      <br>
+    </font><br>
+  </body>
+</html>

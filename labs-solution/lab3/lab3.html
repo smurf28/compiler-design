@@ -1,0 +1,1663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/TR/REC-html40"
+  xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <meta name="ProgId" content="Word.Document">
+    <meta name="Generator" content="Microsoft Word 12">
+    <meta name="Originator" content="Microsoft Word 12">
+    <link rel="File-List"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/filelist.xml">
+    <title>Lab #3</title>
+    <!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>reges</o:Author>
+  <o:LastAuthor>Stuart Reges</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:LastPrinted>2009-01-13T22:05:00Z</o:LastPrinted>
+  <o:Created>2010-01-12T21:22:00Z</o:Created>
+  <o:LastSaved>2010-01-12T21:22:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>639</o:Words>
+  <o:Characters>3863</o:Characters>
+  <o:Company>CSE</o:Company>
+  <o:Lines>32</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4494</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+    <link rel="themeData"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/themedata.thmx">
+    <link rel="colorSchemeMapping"
+href="http://www.cs.washington.edu/education/courses/cse142/10wi/handouts/03_files/colorschememapping.xml">
+    <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+   <w:DontUseIndentAsNumberingTabStop/>
+   <w:FELineBreak11/>
+   <w:WW11IndentRules/>
+   <w:DontAutofitConstrainedTables/>
+   <w:AutofitLikeWW11/>
+   <w:HangulWidthLikeWW11/>
+   <w:UseNormalStyleForList/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="0" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="0" Name="No List"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+    <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.25in .5in .25in .5in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1125197784;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1780164454 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+  </style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+  </head>
+  <body style="" lang="EN-US">
+    <div class="Section1"> <font face="Helvetica, Arial, sans-serif"> </font>
+      <p class="MsoPlainText" style="margin-top: 12pt;"><font
+          face="Helvetica, Arial, sans-serif"><span style="font-size:
+            12pt; font-family: &quot;Times New
+            Roman&quot;,&quot;serif&quot;;">For this assignment you will
+            use the parser-generator Java CUP to write a parser for the
+            C-- language. The parser will find syntax errors and, for
+            syntactically correct programs, it will build an
+            Abstract-Syntax Tree (AST) representation of the program.
+            You will also write methods to unparse the AST built by your
+            parser and some input files to test your parser. A main
+            program, Main.java, that calls the parser and then the
+            unparser, is provided for you to use. <br>
+          </span></font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>Getting started</big></font></h3>
+      <p><font face="Helvetica, Arial, sans-serif">Skeleton files on
+          which you should build are in the <font face="Courier New,
+            Courier, monospace">lab3.tar.gz</font> archive file (see
+          below in the supporting files section). This archive contains:<br>
+        </font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">cmm.jlex</font>: a
+            JLex specification for the C-- language (solution to lab
+            #2). Use this file if there were problems with your JLex
+            specification from lab #2</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">cmm.cup</font>: a
+            Java CUP specification for a small subset of the C--
+            language. You will need to change to this file</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">cmm.grammar</font>:
+            a CFG for the C-- language. Use this to guide the
+            enhancements you make to <font face="Courier New, Courier,
+              monospace">cmm.cup</font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">ast.java</font>:
+            this file contains class definitions for the AST structure
+            that the parser will build. You will need to complete this
+            file, although you should not add any new classes or methods</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">Main.java</font>:
+            the main program that calls the parser, then, for a
+            successful parse, calls the unparser. You don't need to
+            change this file</font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Helvetica, Arial, sans-serif"><font face="Courier
+                New, Courier, monospace">ErrMsg.java</font>: same class
+              as for lab #2. </font></font><font face="Helvetica,
+            Arial, sans-serif"><font face="Helvetica, Arial, sans-serif"><font
+                face="Helvetica, Arial, sans-serif"><font
+                  face="Helvetica, Arial, sans-serif">You don't need to
+                  change this file</font></font></font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Helvetica, Arial, sans-serif"><font face="Courier
+                New, Courier, monospace">SyntaxErrorException.java</font>:&nbsp;&nbsp;
+
+
+
+
+              <font face="Courier New, Courier, monospace">SyntaxErrorException</font>
+              class is for the parser to throw exception in case of
+              syntax errors. </font></font><font face="Helvetica,
+            Arial, sans-serif"><font face="Helvetica, Arial, sans-serif"><font
+                face="Helvetica, Arial, sans-serif"><font
+                  face="Helvetica, Arial, sans-serif">You don't need to
+                  change this file</font></font></font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Courier New, Courier, monospace">Makefile</font>: a
+            Makefile for lab #3. </font><font face="Helvetica, Arial,
+            sans-serif"><font face="Helvetica, Arial, sans-serif">You
+              don't need to change this file</font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Helvetica, Arial, sans-serif"><font face="Courier
+                New, Courier, monospace">progN.cmm</font> and <font
+                face="Courier New, Courier, monospace">progN.cmm.out</font>:
+              some example files of small C-- programs (<font
+                face="Courier New, Courier, monospace">progN.cmm</font>)
+              together with the result of the unparsing method (<font
+                face="Courier New, Courier, monospace">progN.cmm.out</font>).
+
+
+
+              The progN.cmm parse without error. You will have to add
+              more <font face="Courier New, Courier, monospace">.cmm</font>
+              (and generate more <font face="Courier New, Courier,
+                monospace">.cmm.out</font>) files by yourself</font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Helvetica, Arial, sans-serif"><font face="Courier
+                New, Courier, monospace">eprogN.cmm:</font> some example
+              files </font></font><font face="Helvetica, Arial,
+            sans-serif"><font face="Helvetica, Arial, sans-serif">of
+              small C-- programs which have syntax errors and
+              consequently don't parse.&nbsp; </font></font><font
+            face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+              Arial, sans-serif">You will have to add more <font
+                face="Courier New, Courier, monospace">.cmm</font> file
+              with syntax errors by yourself<br>
+            </font></font></li>
+      </ul>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>What to do<br>
+          </big></font></h3>
+      <p><font face="Helvetica, Arial, sans-serif">Besides the lecture
+          and the slides, you should check the <a
+            href="http://www2.cs.tum.edu/projects/cup/docs.php">Java CUP
+            reference manual</a>. The following sub-sections describe
+          the different aspects of your work on this lab.<br>
+        </font></p>
+      <h3><font face="Helvetica, Arial, sans-serif">Operator Precedences
+          and Associativities</font><br>
+      </h3>
+      <p><font face="Helvetica, Arial, sans-serif">The C-- grammar in
+          the file <font face="Courier New, Courier, monospace">cmm.grammar</font>
+          is ambiguous; it does not uniquely define the precedences and
+          associativities of the arithmetic, relational, equality, and
+          logical operators. You will need to add appropriate precedence
+          and associativity declarations to your Java CUP specification:<br>
+        </font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif">assignment is
+            right associative</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">the dot operator
+            is left associative</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">the relational and
+            equality operators ( &lt;, &gt;, &lt;=, &gt;=, ==, and != )
+            are non-associative (i.e., expressions like&nbsp; a &lt; b
+            &lt; c&nbsp; are not allowed and should cause a syntax
+            error)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">all of the other
+            binary operators are left associative</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">the unary minus
+            and not (<font face="Courier New, Courier, monospace">!</font>)
+            operators have the highest precedence, then multiplication
+            and division, then addition and subtraction, then the
+            relational and equality operators, then the logical and
+            operator (<font face="Courier New, Courier, monospace">&amp;&amp;</font>),
+
+
+
+
+            then the logical or operator (<font face="Courier New,
+              Courier, monospace">||</font>), and finally the assignment
+            operator (<font face="Courier New, Courier, monospace">=</font>)</font><br>
+        </li>
+      </ul>
+      <p><font face="Helvetica, Arial, sans-serif">Note that the same
+          token (<font face="Courier New, Courier, monospace">MINUS</font>)
+          is used for both the unary and binary minus operator, and that
+          they have different precedences; however, the <font
+            face="Courier New, Courier, monospace">cmm.grammar</font>
+          has been written so that the unary minus operator has the
+          correct (highest) precedence; therefore, you can declare <font
+            face="Courier New, Courier, monospace">MINUS</font> to have
+          the precedence appropriate for the binary minus operator.<br>
+          <br>
+          Java CUP will eventually print a message telling you how many
+          conflicts it found in your grammar. If the number is not zero,
+          it means that your grammar is still ambiguous and the parser
+          is unlikely to work correctly. Do not ignore this! Go back and
+          fix your specification so that your grammar is not ambiguous.<br>
+        </font></p>
+      <h3><font face="Helvetica, Arial, sans-serif">Building an
+          Abstract-Syntax Tree</font><br>
+      </h3>
+      <p><font face="Helvetica, Arial, sans-serif">To make your parser
+          build an Abstract-Syntax Tree (AST), you must add new
+          productions, declarations, and actions to <font face="Courier
+            New, Courier, monospace">cmm.cup</font>. You will need to
+          decide, for each non-terminal that you add, what type its
+          associated value should have. Then you must add the
+          appropriate non-terminal declaration to the specification. For
+          most non-terminals, the value will either be some kind of tree
+          node (a subclass of <font face="Courier New, Courier,
+            monospace">ASTnode</font>) or a <font face="Courier New,
+            Courier, monospace">LinkedList</font> of some kind of node
+          (use the information in <font face="Courier New, Courier,
+            monospace">ast.java</font> to guide your decision). Note
+          that you cannot use generic types for the types of
+          non-terminals; so if the translation of a non-terminal is a <font
+            face="Courier New, Courier, monospace">LinkedList</font> of
+          some kind of node, you will have to declare its type as just
+          plain <font face="Courier New, Courier, monospace">LinkedList.</font><br>
+          <br>
+          You must also add actions to each new grammar production that
+          you add to <font face="Courier New, Courier, monospace">cmm.cup</font>.
+          Make sure that each action ends by assigning an appropriate
+          value to <font face="Courier New, Courier, monospace">RESULT</font>.
+          Note that the parser will return a <font face="Courier New,
+            Courier, monospace">Symbol</font> whose <u>value field</u>
+          contains the value assigned to <font face="Courier New,
+            Courier, monospace">RESULT</font> in the production for the
+          root non-terminal (non-terminal program).<br>
+        </font></p>
+      <p><font face="Helvetica, Arial, sans-serif">To help completing
+          the <font face="Courier New, Courier, monospace">ast. java</font>
+          file, the following table summarize the Java classes to be
+          completed and their relationships and attributes (the notation
+          <font face="Courier New, Courier, monospace">[ SomeType,... ]</font>
+          means an attribute of type <font face="Courier New, Courier,
+            monospace">List&lt;SomeType&gt;</font>):<br>
+        </font></p>
+      <table width="1309" height="1796" align="center" cellspacing="2"
+        cellpadding="2" border="1">
+        <tbody>
+          <tr>
+            <td valign="top" align="center"><b><font face="Helvetica,
+                  Arial, sans-serif">Class<br>
+                </font></b></td>
+            <td valign="top" align="center"><b><font face="Helvetica,
+                  Arial, sans-serif">Super-class<br>
+                </font></b></td>
+            <td valign="top" align="center"><b><font face="Helvetica,
+                  Arial, sans-serif">Sub-classes<br>
+                </font></b></td>
+            <td valign="top" align="center"><b><font face="Helvetica,
+                  Arial, sans-serif">Attributes<br>
+                </font></b></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ProgramNode, DeclListNode, FormalsListNode,
+                FnBodyNode, StmtListNode, ExpListNode, DeclNode,
+                TypeNode, StmtNode, ExpNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ProgramNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DeclListNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DeclListNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">[ DeclNode,... ]<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">FormalsListNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">[ FormalDeclNode,... ]<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">FnBodyNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DeclListNode, StmtListNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtListNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">[ StmtNode,... ]<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpListNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">[ ExpNode,... ]<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DeclNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">VarDeclNode, FnDeclNode, FormalDeclNode,
+                StructDeclNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">VarDeclNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DeclNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TypeNode, IdNode, int</font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">FnDeclNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DeclNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TypeNode, IdNode, FormalsListNode, FnBodyNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">FormalDeclNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DeclNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TypeNode, IdNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StructDeclNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DeclNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IdNode, DeclListNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TypeNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IntNode, BoolNode, VoidNode, StructNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IntNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TypeNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BoolNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TypeNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">VoidNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TypeNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StructNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TypeNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IdNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">AssignStmtNode, StmtNode, PostDecStmtNode,
+                ReadStmtNode, WriteStmtNode, IfStmtNode, IfElseStmtNode,
+                WhileStmtNode, CallStmtNode, ReturnStmtNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">AssignStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">AssignNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">PostIncStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">PostDecStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ReadStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">WriteStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IfStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode, DeclListNode, StmtListNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IfElseStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode, DeclListNode, StmtListNode,
+                DeclListNode, StmtListNode</font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">WhileStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode, DeclListNode, StmtListNode</font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">CallStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">CallExpNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ReturnStmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StmtNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ASTnode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IntLitNode, StringLitNode, TrueNode,
+                FalseNode, IdNode, DotAccess, AssignNode, CallExpNode,
+                BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IntLitNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">int, int, int<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">StringLitNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">int, int, String<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TrueNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">int, int</font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">FalseNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">int, int</font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IdNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">int, int, String</font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DotAccessExpNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode, IdNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">AssignNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode, ExpNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">CallExpNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">IdNode, ExpListNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">UnaryExpNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">NotNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode<br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">PlusNode, MinusNode, TimesNode, DivideNode,
+                AndNode, OrNode, EqualsNode, NotEqualsNode, LessNode,
+                GreaterNode, LessEqNode, GreaterEqNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">ExpNode, ExpNode</font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">NotNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">UnaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">PlusNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">MinusNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">TimesNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">DivideNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">AndNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">OrNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">EqualsNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">NotEqualsNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">LessNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">GreaterNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">LessEqNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+          <tr>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">GreaterEqNode<br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace">BinaryExpNode</font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+            <td valign="top"><font face="Courier New, Courier,
+                monospace"><br>
+              </font></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><font face="Helvetica, Arial, sans-serif"><br>
+        </font></p>
+      <h3><font face="Helvetica, Arial, sans-serif">Unparsing</font><br>
+      </h3>
+      <p><font face="Helvetica, Arial, sans-serif">To test your parser,
+          you must write the <font face="Courier New, Courier,
+            monospace">unparse</font> methods for the subclasses of <font
+            face="Courier New, Courier, monospace">ASTnode</font> (in
+          the file <font face="Courier New, Courier, monospace">ast.java</font>).
+
+
+
+
+          When the <font face="Courier New, Courier, monospace">unparse</font>
+          method of the root node of the program's abstract-syntax tree
+          is called, it should print a nicely formatted version of the
+          program (this is called <font face="Courier New, Courier,
+            monospace">unparsing</font> the abstract-syntax tree). The
+          output produced by calling <font face="Courier New, Courier,
+            monospace">unparse</font> should be the same as the input to
+          the parser except that:<br>
+        </font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif">there will be no
+            comments in the output.</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">the output will be
+            "pretty printed" (newlines and indentation will be used to
+            make the program readable); and</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">expressions will
+            be fully parenthesized to reflect the order of evaluation.</font></li>
+      </ul>
+      <font face="Helvetica, Arial, sans-serif"><br>
+        For example, if the input program includes:</font><br>
+      <blockquote>
+        <p><font face="Helvetica, Arial, sans-serif"><font face="Courier
+              New, Courier, monospace">if (b == -1) { x = 4+3*5-y; while
+              (c) { y = y*2+x; } } else { x = 0; }</font></font><font
+            face="Helvetica, Arial, sans-serif"><br>
+          </font></p>
+      </blockquote>
+      <p><font face="Helvetica, Arial, sans-serif">the output of <font
+            face="Courier New, Courier, monospace">unparse</font> should
+          be something like the following:</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, monospace">if ((b == (-1)))
+            {<br>
+            &nbsp;&nbsp;&nbsp; x = ((4 + (3 * 5)) - y);<br>
+            &nbsp;&nbsp;&nbsp; while (c) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y = ((y * 2) +
+            x);<br>
+            &nbsp;&nbsp;&nbsp; }<br>
+            }<br>
+            else {<br>
+            &nbsp;&nbsp;&nbsp; x = 0;<br>
+            }<br>
+          </font></p>
+      </blockquote>
+      <p><font face="Helvetica, Arial, sans-serif">Notice that if you
+          want to test the previous exception of code, it has to be put
+          inside a function declaration to make it syntactically
+          correct.</font><font face="Helvetica, Arial, sans-serif">
+          Trying to <i>unparse</i> a tree will help you determine
+          whether you have built the tree correctly in the first place.
+          Besides looking at the output of your <i>unparser</i>, you
+          should try using it as the input to your parser; if it doesn't
+          parse, you've made a mistake either in how you built your
+          abstract-syntax tree or in how you've written your <i>unparser</i>.</font></p>
+      <blockquote>
+        <p></p>
+      </blockquote>
+      <h3><font face="Helvetica, Arial, sans-serif">Modifying ast.java</font><br>
+      </h3>
+      <p><font face="Helvetica, Arial, sans-serif">We will keep using
+          the same abstract-syntax trees in next labs, so you must cope
+          with the following rules:</font><br>
+        <br>
+        <font face="Helvetica, Arial, sans-serif">modify <font
+            face="Courier New, Courier, monospace">ast.java</font> only
+          by completing the content of the classes and by redefining the
+          <font face="Courier New, Courier, monospace">unparse</font>
+          method. Do not change the class names nor the class hierarchy
+          and don't define new classes</font><br>
+        <font face="Helvetica, Arial, sans-serif">make sure that no <font
+            face="Courier New, Courier, monospace">LinkedList</font>
+          field is <font face="Courier New, Courier, monospace">null</font>
+          (i.e., when you call the constructor of a class with a <font
+            face="Courier New, Courier, monospace">LinkedList</font>
+          argument, that argument should never be <font face="Courier
+            New, Courier, monospace">null</font>). Note that it is ok to
+          make the <font face="Courier New, Courier, monospace">ExpNode</font>
+          field of a <font face="Courier New, Courier, monospace">ReturnStmtNode</font>
+          equal to <font face="Courier New, Courier, monospace">null</font>
+          (when no value is returned), likewise for the <font
+            face="Courier New, Courier, monospace">ExpListNode</font>
+          field of a <font face="Courier New, Courier, monospace">CallExpNode</font>
+          (when the call has no arguments)</font><br>
+        <font face="Helvetica, Arial, sans-serif">follow the convention
+          that a <font face="Courier New, Courier, monospace">VarDeclNode</font>
+          has a private field <font face="Courier New, Courier,
+            monospace">mySize</font> of type <font face="Courier New,
+            Courier, monospace">int</font> and a public static field <font
+            face="Courier New, Courier, monospace">NOT_STRUCT</font> of
+          initial value -1. The </font><font face="Helvetica, Arial,
+          sans-serif"><font face="Helvetica, Arial, sans-serif">private
+            field <font face="Courier New, Courier, monospace">mySize</font>
+          </font> has the value <font face="Courier New, Courier,
+            monospace">VarDeclNode.NOT_STRUCT</font> if the type of the
+          declared variable is a non-<font face="Courier New, Courier,
+            monospace">struct</font> type. For this assignment, you
+          could assume the size of <font face="Courier New, Courier,
+            monospace">struct</font> is 0.<br>
+        </font></p>
+      <h3><font face="Helvetica, Arial, sans-serif"><font
+            face="Helvetica, Arial, sans-serif">Testing<br>
+          </font></font></h3>
+      <p><font face="Helvetica, Arial, sans-serif"><font
+            face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+              Arial, sans-serif">Some<font face="Courier New, Courier,
+                monospace"> .cmm </font>and<font face="Courier New,
+                Courier, monospace"> .cmm.out </font>files are provided<font
+                face="Helvetica, Arial, sans-serif">:</font></font></font></font></p>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+                Arial, sans-serif"><font face="Helvetica, Arial,
+                  sans-serif"><font face="Helvetica, Arial, sans-serif"><font
+                      face="Courier New, Courier, monospace">progN.cmm</font>
+                    and <font face="Courier New, Courier, monospace">progN.cmm.out
+
+
+                    </font>(<font face="Courier New, Courier, monospace">N</font>
+                    = 1, 2, 3):&nbsp; C-- <font face="Helvetica, Arial,
+                      sans-serif">s<font face="Helvetica, Arial,
+                        sans-serif">ource files and the corresponding
+                        output from the <font face="Courier New,
+                          Courier, monospace">unparse</font> m<font
+                          face="Helvetica, Arial, sans-serif">ethod</font></font></font></font></font></font></font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif"><font
+              face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+                Arial, sans-serif"><font face="Helvetica, Arial,
+                  sans-serif"><font face="Helvetica, Arial, sans-serif"><font
+                      face="Helvetica, Arial, sans-serif"><font
+                        face="Helvetica, Arial, sans-serif"><font
+                          face="Helvetica, Arial, sans-serif"><font
+                            face="Helvetica, Arial, sans-serif"><font
+                              face="Courier New, Courier, monospace">eprogN.cmm</font><font
+                              face="Helvetica, Arial, sans-serif"> (<font
+                                face="Courier New, Courier, monospace">N</font>
+                              = 1, 2<font face="Helvetica, Arial,
+                                sans-serif">, 3):&nbsp; C-- source files
+                                with syntax erro<font face="Helvetica,
+                                  Arial, sans-serif">rs</font></font></font></font></font></font></font></font></font></font></font></font></li>
+      </ul>
+      <p><font face="Helvetica, Arial, sans-serif"><font
+            face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+              Arial, sans-serif"><font face="Helvetica, Arial,
+                sans-serif"><font face="Helvetica, Arial, sans-serif"><font
+                    face="Helvetica, Arial, sans-serif"><font
+                      face="Helvetica, Arial, sans-serif"><font
+                        face="Helvetica, Arial, sans-serif"><font
+                          face="Helvetica, Arial, sans-serif"><font
+                            face="Helvetica, Arial, sans-serif"><font
+                              face="Helvetica, Arial, sans-serif"><font
+                                face="Helvetica, Arial, sans-serif">You
+                                will have to provide your own test files
+                                to be sure to <font face="Helvetica,
+                                  Arial, sans-serif">test</font> a<font
+                                  face="Helvetica, Arial, sans-serif">ll
+                                  the C-- syntax<font face="Helvetica,
+                                    Arial, sans-serif">. </font>You
+                                  should be sure to include code that
+                                  corresponds to every grammar rule in
+                                  the file <font face="Courier New,
+                                    Courier, monospace">cmm.grammar</font>.</font></font></font></font></font></font></font></font></font></font></font></font></font><font
+          face="Helvetica, Arial, sans-serif"><font face="Helvetica,
+            Arial, sans-serif"><font face="Helvetica, Arial, sans-serif"><font
+                face="Helvetica, Arial, sans-serif"><font
+                  face="Helvetica, Arial, sans-serif"><font
+                    face="Helvetica, Arial, sans-serif"><font
+                      face="Helvetica, Arial, sans-serif"><font
+                        face="Helvetica, Arial, sans-serif"><font
+                          face="Helvetica, Arial, sans-serif"><font
+                            face="Helvetica, Arial, sans-serif"><font
+                              face="Helvetica, Arial, sans-serif"><font
+                                face="Helvetica, Arial, sans-serif"><font
+                                  face="Helvetica, Arial, sans-serif">
+                                  <meta http-equiv="content-type"
+                                    content="text/html;
+                                    charset=windows-1252">
+                                </font></font></font></font></font></font></font></font></font></font></font></font></font>
+      </p>
+      <font face="Helvetica, Arial, sans-serif"></font>
+      <h3><font face="Helvetica, Arial, sans-serif"><big>Development
+            strategy<br>
+          </big></font></h3>
+      <font face="Helvetica, Arial, sans-serif">This lab involves three
+        main tasks:</font><br>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif">writing the parser
+            specification (<font face="Courier New, Courier, monospace">cmm.cup</font>)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">writing the <font
+              face="Courier New, Courier, monospace">unparse</font>
+            methods for the AST nodes (in <font face="Courier New,
+              Courier, monospace">ast.java</font>)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">writing a input
+            file (<font face="Courier New, Courier, monospace">progN.cmm</font>)
+            to test your implementation</font></li>
+      </ul>
+      <font face="Helvetica, Arial, sans-serif"><br>
+        I suggest that you proceed as follows, testing your parser after
+        each change:<br>
+      </font>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif">start by making a
+            very small change to <font face="Courier New, Courier,
+              monospace">cmm.cup</font>. For example, add the rules and
+            actions for:</font></li>
+      </ul>
+      <font face="Helvetica, Arial, sans-serif">&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <font
+          face="Courier New, Courier, monospace">type ::= BOOL</font></font><font
+        face="Courier New, Courier, monospace"><br>
+        &nbsp;&nbsp;&nbsp;&nbsp; type ::= VOID</font>
+      <ul>
+        <li><font face="Helvetica, Arial, sans-serif">also update the
+            appropriate <font face="Courier New, Courier, monospace">unparse</font>
+            method in <font face="Courier New, Courier, monospace">ast.java</font>.
+            Make sure that you can create and run the parser after
+            making this small change. (To create the parser, just type <font
+              face="Courier New, Courier, monospace">make</font> in the
+            <font face="Courier New, Courier, monospace">lab3</font>
+            directory where you are working)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">next, add the
+            rules needed to allow <font face="Courier New, Courier,
+              monospace">struct</font> declarations</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">next, add the
+            rules needed to allow programs to include functions with no
+            formal parameters and with empty statement lists only, and
+            update the corresponding <font face="Courier New, Courier,
+              monospace">unparse</font> methods</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">add the rules (and
+            <font face="Courier New, Courier, monospace">unparse</font>
+            methods) for the simplest kind of expressions -- just plain
+            identifiers</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">write test inputs
+            for your statements</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">do the same for
+            non-terminals. Note that you will also need to give the
+            operators the right precedences and associativities during
+            this step (see above)</font></li>
+      </ul>
+      <font face="Helvetica, Arial, sans-serif"><br>
+        Do not try to implement all of your non-terminals at once.
+        Instead, add one new rule at a time to the Java CUP
+        specification, make the corresponding changes to the <font
+          face="Courier New, Courier, monospace">unparse</font> methods
+        in <font face="Courier New, Courier, monospace">ast.java</font>,
+        and test your work by writing a C-- program that includes the
+        new construct you added, and make sure that it is <i>parsed</i>
+        and <i>unparsed</i> correctly.<br>
+      </font><font face="Helvetica, Arial, sans-serif"><span
+          style="font-size: 12pt; font-family: &quot;Times New
+          Roman&quot;,&quot;serif&quot;;"></span></font><font
+        face="Helvetica, Arial, sans-serif"><span style="font-size:
+          12pt; font-family: &quot;Times New
+          Roman&quot;,&quot;serif&quot;;"></span></font><font
+        face="Helvetica, Arial, sans-serif"><o:p></o:p></font>
+      <h3><font face="Helvetica, Arial, sans-serif"><o:p><big>What to
+              turn in</big></o:p></font></h3>
+      <font face="Helvetica, Arial, sans-serif">Turn in all your Java
+        sources (the <font face="Courier New, Courier, monospace">.java</font>
+        files) files, the <font face="Courier New, Courier, monospace">cmm.cup</font>
+        file,&nbsp; all the <font face="Courier New, Courier,
+          monospace">.cmm</font> files you used for testing and the
+        corresponding <font face="Courier New, Courier, monospace">.cmm.out</font>
+        files, plus the <font face="Courier New, Courier, monospace">Makefile</font>.&nbsp;
+
+
+
+
+        <b>Don't turn in any&nbsp; </b><b><font face="Courier New,
+            Courier, monospace">.class</font></b><b>&nbsp;&nbsp; file!<br>
+          <br>
+        </b>To turn in your files, you <font color="#ff0000"><b>MUST
+            STRICTLY FOLLOW</b></font> those steps:<br>
+      </font>
+      <ol>
+        <li><font face="Helvetica, Arial, sans-serif">create a folder
+            name after your name (please use the English version of your
+            name, like&nbsp; <font face="Courier New, Courier,
+              monospace">MarcGaetano</font>)</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">copy the files to
+            turn in into that folder</font></li>
+        <li><font face="Helvetica, Arial, sans-serif">zip that folder:
+            in the terminal, go on the parent folder of your folder and
+            issue the command:&nbsp; <font face="Courier New, Courier,
+              monospace">zip -r YourFolder.zip </font></font><font
+            face="Helvetica, Arial, sans-serif"><font face="Courier New,
+              Courier, monospace">YourFolder/ </font>. This will
+            produce the archive file <font face="Courier New, Courier,
+              monospace">YourFolder.zip</font></font></li>
+        <li><font face="Helvetica, Arial, sans-serif">upload the archive
+            <font face="Courier New, Courier, monospace">YourFolder.zip</font>
+            on the eLearning platform</font></li>
+      </ol>
+      <font face="Helvetica, Arial, sans-serif"><br>
+        <font color="#ff0000"><b>Labs turned in not following those ru</b><b>les
+
+
+
+
+
+
+
+            won't be graded!</b></font><br>
+      </font>
+      <h2><font face="Helvetica, Arial, sans-serif"> Supporting files</font></h2>
+      <font face="Helvetica, Arial, sans-serif"> The supporting files
+        are grabbed in the following archive file you need to download
+        and extract into your <font face="Courier New, Courier,
+          monospace">~/compiler</font> folder:</font><br>
+      <h3><o:p></o:p></h3>
+    </div>
+  </body>
+</html>
